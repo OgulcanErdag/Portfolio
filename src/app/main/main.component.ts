@@ -31,7 +31,7 @@ export class MainComponent {
     {
       number: '02',
       name: 'DABubble',
-      description: 'As soon as the project is published, the description will also be made public.',
+      description: 'Messenger like Slack or Discord including direct messaging as well as channels with the possibiliy of opening threads to specific messages.',
       skills: ['CSS', 'HTML', 'TypeScript', 'Angular', 'Firebase'],
       imageUrl: '../../assets/img/preview_dabubble.png',
       githubLink: 'https://github.com/OgulcanErdag/DABubble.git',
@@ -87,10 +87,10 @@ export class MainComponent {
 
   setActiveLang(lang: 'en' | 'de') {
     this.activeLang = lang;
-    this.translationData.setLanguage(lang);  
+    this.translationData.setLanguage(lang);
   }
 
   getTranslation(key: string): string {
-    return this.translationData.getTranslation(key);  
+    return this.translationData.getTranslation(key);
   }
 }

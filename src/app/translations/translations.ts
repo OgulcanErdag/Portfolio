@@ -62,27 +62,27 @@ export const translations = {
     },
 
     CONTACTS: {
-        HEADLINE1: "Contact me",
-        HEADLINE2: "Let's work",
-        H2BR: "together",
-        HEADLINE3: "Got a problem to solve?",
-        TEXT1: "Contact me through this form; I am interested in hearing from you, knowing your ideas, and contributing to your projects with my work.",
-        TEXT2: "Need a frontend developer?",
-        SPAN1: "Let's talk!",
-        FIELD1: "What's your name?",
-        PLACEHOLDER1: "Your name goes here",
-        FIELD2: "What's your email?",
-        PLACEHOLDER2: "youremail@email.com",
-        FIELD3: "How can I help you?",
-        PLACEHOLDER3: "Hello Ogi, I'm interested in...",
-        TEXT3: "I've read the",
-        SPAN2: "privacy policy",
-        TEXT4: "and agree to the processing of my data as outlined.",
-        BUTTON: "Say hello :-)",
-        ERROR_EMAIL_REQUIRED: "Email is required.",
-        ERROR_INVALID_EMAIL: "Please enter a valid email address.",
-        ERROR_PRIVACY_REQUIRED: "Please accept the privacy policy.",
-        SUCCESS_MESSAGE: "Thanks for your message! I will respond as soon as possible!"
+      HEADLINE1: "Contact me",
+      HEADLINE2: "Let's work",
+      H2BR: "together",
+      HEADLINE3: "Got a problem to solve?",
+      TEXT1: "Contact me through this form; I am interested in hearing from you, knowing your ideas, and contributing to your projects with my work.",
+      TEXT2: "Need a frontend developer?",
+      SPAN1: "Let's talk!",
+      FIELD1: "What's your name?",
+      PLACEHOLDER1: "Your name goes here",
+      FIELD2: "What's your email?",
+      PLACEHOLDER2: "youremail@email.com",
+      FIELD3: "How can I help you?",
+      PLACEHOLDER3: "Hello Ogi, I'm interested in...",
+      TEXT3: "I've read the",
+      SPAN2: "privacy policy",
+      TEXT4: "and agree to the processing of my data as outlined.",
+      BUTTON: "Say hello :-)",
+      ERROR_EMAIL_REQUIRED: "Email is required.",
+      ERROR_INVALID_EMAIL: "Please enter a valid email address.",
+      ERROR_PRIVACY_REQUIRED: "Please accept the privacy policy.",
+      SUCCESS_MESSAGE: "Thanks for your message! I will respond as soon as possible!"
     },
     PROJECTS: {
       HEADLINE: 'What is this project about?',
@@ -94,7 +94,7 @@ export const translations = {
       },
       PROJECT1: {
         DESCRIPTION:
-          'As soon as the project is published, the description will also be made public.',
+          'Messenger like Slack or Discord including direct messaging as well as channels with the possibiliy of opening threads to specific messages.',
       },
       PROJECT2: {
         DESCRIPTION:
@@ -243,7 +243,7 @@ export const translations = {
         'Ogi behält auch in komplexen Projekten den Überblick und findet immer eine elegante Lösung für jedes Problem.',
       PERSON5: 'Laura M. - Teampartnerin',
     },
-    
+
 
     CONTACTS: {
       HEADLINE1: 'Kontaktiere mich',
@@ -279,13 +279,13 @@ export const translations = {
       },
       PROJECT1: {
         DESCRIPTION:
-          'Sobald das Projekt veröffentlicht wird, wird auch die Beschreibung öffentlich gemacht.',
+          'Messenger nach Vorbild von Slack oder Discord. Sowohl Direct Messaging als auch Kommunikation in Channels sind möglich.',
       },
       PROJECT2: {
         DESCRIPTION:
           'Spring-, Lauf- und Wurfspiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.',
       },
-      
+
     },
     IMPRINT: {
       H1: 'Imprint',
