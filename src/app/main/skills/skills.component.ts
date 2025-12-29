@@ -13,17 +13,26 @@ import { CommonModule } from '@angular/common';
 export class SkillsComponent {
 
   skills: Array<{ img: string, text: string }> = [
-    {'img': '../../../assets/img/skills/skill1.png', 'text' :'HTML'},
-    {'img': '../../../assets/img/skills/skill2.png', 'text' :'CSS'},
-    {'img': '../../../assets/img/skills/skill3.png', 'text' :'JavaScript'},
-    {'img': '../../../assets/img/skills/skill4.png', 'text' :'Material Design'},
-    {'img': '../../../assets/img/skills/skill5.png', 'text' :'TypeScript'},
-    {'img': '../../../assets/img/skills/skill6.png', 'text' :'Angular'},
-    {'img': '../../../assets/img/skills/skill7.png', 'text' :'Firebase'},
-    {'img': '../../../assets/img/skills/skill8.png', 'text' :'Git'},
-    {'img': '../../../assets/img/skills/skill9.png', 'text' :'REST-API'},
-    {'img': '../../../assets/img/skills/skill10.png', 'text' :'Scrum'},
-    {'img': '../../../assets/img/skills/skill11.png', 'text' :'Growth mindset'},
+    { 'img': '../../../assets/img/skills/html.png', 'text': 'HTML' },
+    { 'img': '../../../assets/img/skills/css-3.png', 'text': 'CSS' },
+    { 'img': '../../../assets/img/skills/js.png', 'text': 'JavaScript' },
+    { 'img': '../../../assets/img/skills/typescript.png', 'text': 'TypeScript' },
+    { 'img': '../../../assets/img/skills/skill5.png', 'text': 'Material Design' },
+    { 'img': '../../../assets/img/skills/programing.png', 'text': 'Angular' },
+    { 'img': '../../../assets/img/skills/firebase.png', 'text': 'Firebase' },
+    { 'img': '../../../assets/img/skills/git.png', 'text': 'Git' },
+    { 'img': '../../../assets/img/skills/gear.png', 'text': 'REST-API' },
+    { 'img': '../../../assets/img/skills/scrum.png', 'text': 'Scrum' },
+    { 'img': '../../../assets/img/skills/python.png', 'text': 'Python' },
+    { 'img': '../../../assets/img/skills/django.svg', 'text': 'Django' },
+    { 'img': '../../../assets/img/skills/docker.png', 'text': 'Docker' },
+    { 'img': '../../../assets/img/skills/linux.png', 'text': 'Linux' },
+    { 'img': '../../../assets/img/skills/postgre-sql.png', 'text': 'PostgreSQL' },
+    { 'img': '../../../assets/img/skills/aws.png', 'text': 'Amazon Web Services' },
+    { 'img': '../../../assets/img/skills/terraform.png', 'text': 'Terraform' },
+    { 'img': '../../../assets/img/skills/kubernetes.png', 'text': 'Kubernetes' },
+    { 'img': '../../../assets/img/skills/azure.png', 'text': 'Azure' },
+    { 'img': '../../../assets/img/skills/skill11.png', 'text': 'Growth mindset' },
   ]
 
   translationData = inject(TranslationsService);
@@ -31,11 +40,11 @@ export class SkillsComponent {
 
   setActiveLang(lang: 'en' | 'de') {
     this.activeLang = lang;
-    this.translationData.setLanguage(lang);  
+    this.translationData.setLanguage(lang);
   }
 
   getTranslation(key: string): string {
-    return this.translationData.getTranslation(key);  
+    return this.translationData.getTranslation(key);
   }
 
   isBubbleVisible = false;
@@ -56,7 +65,7 @@ export class SkillsComponent {
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-}
+  }
 }
