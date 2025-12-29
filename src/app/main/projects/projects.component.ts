@@ -21,7 +21,7 @@ export class ProjectsComponent {
   ];
 
   onProjectClick(projectIndex: number) {
-    this.projectClicked.emit(projectIndex);  // Event nach oben senden
+    this.projectClicked.emit(projectIndex);
   }
 
   hoveredIndex: number | null = null;
@@ -30,6 +30,7 @@ export class ProjectsComponent {
     '../../../assets/img/preview_join.png',
     '../../../assets/img/preview_dabubble.png',
     '../../../assets/img/preview_pollo.png',
+    '../../../assets/img/preview_coderr.png',
   ];
 
   setHoveredIndex(index: number | null) {
@@ -41,10 +42,10 @@ export class ProjectsComponent {
 
   setActiveLang(lang: 'en' | 'de') {
     this.activeLang = lang;
-    this.translationData.setLanguage(lang);  
+    this.translationData.setLanguage(lang);
   }
 
   getTranslation(key: string): string {
-    return this.translationData.getTranslation(key);  
+    return this.translationData.getTranslation(key);
   }
 }

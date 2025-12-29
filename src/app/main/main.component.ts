@@ -26,7 +26,7 @@ export class MainComponent {
       skills: ['CSS', 'HTML', 'JavaScript'],
       imageUrl: '../../assets/img/preview_join.png',
       githubLink: 'https://github.com/OgulcanErdag/Join.git',
-      liveLink: 'http://join.ogulcan-erdag.com/'
+      liveLink: 'https://join.ogulcan-erdag.com/'
     },
     {
       number: '02',
@@ -35,7 +35,7 @@ export class MainComponent {
       skills: ['CSS', 'HTML', 'TypeScript', 'Angular', 'Firebase'],
       imageUrl: '../../assets/img/preview_dabubble.png',
       githubLink: 'https://github.com/OgulcanErdag/DABubble.git',
-      liveLink: 'http://dabubble.ogulcan-erdag.com/'
+      liveLink: 'https://dabubble.ogulcan-erdag.com/'
     },
     {
       number: '03',
@@ -44,7 +44,38 @@ export class MainComponent {
       skills: ['CSS', 'HTML', 'Angular', 'TypeScript'],
       imageUrl: '../../assets/img/preview_pollo.png',
       githubLink: 'https://github.com/OgulcanErdag/El_Pollo_Loco.git',
-      liveLink: 'http://el-pollo-loco.ogulcan-erdag.com/'
+      liveLink: 'https://el-pollo-loco.ogulcan-erdag.com/'
+    },
+    {
+      number: '04',
+      name: 'Coderr',
+      description: 'Test.',
+      skills: ['CSS', 'HTML', 'JavaScript', 'Django'],
+      imageUrl: '../../assets/img/preview_coderr.png',
+      githubLink: 'https://github.com/OgulcanErdag/Coderr_deploy_backend.git',
+      liveLink: 'https://coderr.ogulcan-erdag.com/'
+    },
+
+    {
+      number: '05',
+      name: 'KanMind',
+      description: 'KanMind is a web-based application that provides a structured and user-friendly dashboard experience. The project was created to practice and showcase full-stack development, API integration, authentication, and production-ready deployment.',
+      skills: ['CSS', 'HTML', 'JavaScript', 'Django'],
+      imageUrl: '../../assets/img/preview_kanmind.png',
+      githubLink: 'https://github.com/OgulcanErdag/kanmind_frontend.git',
+      liveLink: 'https://kanmind.ogulcan-erdag.com/'
+    },
+
+    {
+      number: '06',
+      name: 'Videoflix',
+      description: `Videoflix is a full-stack video streaming platform designed to deliver scalable, high-performance media experiences.
+      It combines a modern frontend with a robust backend, featuring HLS streaming, asynchronous video processing, and cloud-ready architecture.
+      The project demonstrates real-world use of Full-Stack and DevOps practices, from application development to deployment and operations.`,
+      skills: ['CSS', 'HTML', 'JavaScript', 'Django', 'PostgreSQL', 'Redis'],
+      imageUrl: '../../assets/img/preview_videoflix.png',
+      githubLink: 'https://github.com/OgulcanErdag/Videoflix_Backend.git',
+      liveLink: 'https://videoflix.ogulcan-erdag.com/'
     }
   ];
 

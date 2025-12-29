@@ -9,15 +9,15 @@ export interface TranslationStructure {
     BUTTON2: string;
     BANDEROLE1: string;
     BANDEROLE2: string;
-    BANDEROLE3: string; 
+    BANDEROLE3: string;
   };
   ABOUTME: {
     HEADLINE1: string;
     HEADLINE2: string;
     TEASER: string;
     TEXT1: string;
-    TEXT2: string; 
-    TEXT3: string; 
+    TEXT2: string;
+    TEXT3: string;
   };
   SKILLS: {
     TOP_HEADLINE: string;
@@ -78,7 +78,16 @@ export interface TranslationStructure {
     },
     PROJECT2: {
       DESCRIPTION: string,
-    }
+    },
+    PROJECT3: {
+      DESCRIPTION: string,
+    },
+    PROJECT4: {
+      DESCRIPTION: string,
+    },
+    PROJECT5: {
+      DESCRIPTION: string,
+    },
   },
   IMPRINT: {
     H1: string,
@@ -158,5 +167,4 @@ export interface TranslationStructure {
     T40: string,
     T41: string,
   }
-
 }

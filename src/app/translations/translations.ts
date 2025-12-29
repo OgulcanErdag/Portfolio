@@ -8,7 +8,7 @@ export const translations = {
     START: {
       BUTTON1: 'Check my work',
       BUTTON2: 'Contact me',
-      BANDEROLE1: 'Frontend Developer',
+      BANDEROLE1: 'Fullstack & Devops Engineer',
       BANDEROLE2: '•',
       BANDEROLE3: 'Based in Stuttgart',
     },
@@ -16,20 +16,27 @@ export const translations = {
       HEADLINE1: 'Who I Am',
       HEADLINE2: 'About me',
       TEASER:
-        'Hi, I’m a frontend developer from Stuttgart, passionate about building high-performance and user-friendly web applications. For me, IT is not just a career – it’s where logical thinking meets innovative technology. With a strong focus on clean code and efficiency, I help solve complex problems and drive projects to success.',
+        `Hi, I’m a Full-Stack & DevOps Engineer based in Stuttgart, passionate about designing, building, and operating scalable, secure, 
+        and high-performance systems. For me, IT is more than a profession – it’s the intersection of software engineering, cloud infrastructure, 
+        and automation. I focus on clean architecture, reliability, and efficiency to transform complex requirements into robust, production-ready solutions.`,
       TEXT1:
-        'Currently, I work at AMG in the development department, where I contribute to high-performance projects that push the boundaries of innovation.',
+        `I work independently as a self-employed engineer, focusing on cloud-native software, automation, 
+        and performance-oriented development. I support projects end-to-end, from development to deployment and stable operations.`,
       TEXT2:
-        'With a curious mindset and a commitment to personal growth, I’m always eager to embrace new challenges that expand my expertise.',
+        `Curious and growth-driven, I work across the full technology stack – frontend, backend, CI/CD, containers, 
+        and cloud infrastructure – with a holistic, systems-oriented mindset.`,
       TEXT3:
-        'To me, programming is more than just writing code – it’s about crafting solutions that simplify complexity and make technology accessible to everyone.',
+        `Engineering for me means building reliable, scalable systems through automation, observability, and DevOps best practices, 
+        making complex technology efficient and accessible.`,
     },
 
     SKILLS: {
       TOP_HEADLINE: 'Technologies',
       HEADLINE: 'Skill Set',
       TEXT1:
-        'During my education, I have worked on various projects using a range of frontend technologies and concepts. I am open to new technologies and methodologies to continuously improve my skills and stay ahead in the ever-evolving landscape of web development.',
+        `Throughout my education and professional career, I have worked on a wide range of software and infrastructure projects, applying both Full-Stack and DevOps technologies and practices. 
+         I remain open to new technologies and modern approaches, continuously developing my skills and staying up to date in software engineering, 
+         cloud, and DevOps.`,
       HEADLINE2: 'You need',
       HEADLINE_SPAN: 'another skill?',
       TEXT2:
@@ -99,6 +106,22 @@ export const translations = {
       PROJECT2: {
         DESCRIPTION:
           'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      },
+      PROJECT3: {
+        DESCRIPTION:
+          `Coderr is a full-stack service marketplace platform that connects customers with service providers through structured offers and orders.
+          It features a dynamic frontend and a secure backend with role-based access, RESTful APIs, and a scalable data model.
+          The project demonstrates practical Full-Stack development combined with backend architecture and deployment-ready design.`
+      },
+      PROJECT4: {
+        DESCRIPTION:
+          'KanMind is a web-based application that provides a structured and user-friendly dashboard experience. The project was created to practice and showcase full-stack development, API integration, authentication, and production-ready deployment.'
+      },
+      PROJECT5: {
+        DESCRIPTION:
+          `Videoflix is a full-stack video streaming platform designed to deliver scalable, high-performance media experiences.
+           It combines a modern frontend with a robust backend, featuring HLS streaming, asynchronous video processing, and cloud-ready architecture.
+           The project demonstrates real-world use of Full-Stack and DevOps practices, from application development to deployment and operations.`,
       },
     },
     IMPRINT: {
@@ -191,7 +214,7 @@ export const translations = {
     START: {
       BUTTON1: 'Meine Projekte',
       BUTTON2: 'Kontakt',
-      BANDEROLE1: 'Frontend Developer',
+      BANDEROLE1: 'Fullstack & DevOps Engineer',
       BANDEROLE2: '•',
       BANDEROLE3: 'Wohnhaft in Stuttgart',
     },
@@ -199,21 +222,33 @@ export const translations = {
       HEADLINE1: 'Wer ich bin',
       HEADLINE2: 'Über mich',
       TEASER:
-        'Hallo! Ich bin ein Frontend-Entwickler aus Stuttgart mit einer Leidenschaft für die Entwicklung funktionaler und leistungsstarker Websites und Anwendungen. IT ist für mich nicht nur ein Beruf – es ist der Ort, an dem Logik und Technologie zusammenkommen. Mit meinem starken Fokus auf Benutzerfreundlichkeit und sauberem Code setze ich Ideen in digitale Erlebnisse um, die wirklich funktionieren.',
+        `Ich bin Full-Stack- & DevOps-Engineer aus Stuttgart mit Leidenschaft für die Entwicklung und den Betrieb 
+        skalierbarer, sicherer und leistungsstarker Systeme. Mein Fokus liegt auf sauberer Architektur, 
+        Cloud-Technologien und Automatisierung.`,
 
       TEXT1:
-        'Aktuell arbeite ich bei AMG in der Entwicklungsabteilung, wo ich an innovativen Projekten mitwirke, die neue Maßstäbe setzen.',
+        `Ich arbeite selbstständig an cloud-nativen Software- und Infrastrukturprojekten 
+        und begleite diese ganzheitlich – von der Entwicklung über das Deployment bis zum stabilen Betrieb.`,
+
       TEXT2:
-        'Mit einer offenen Einstellung und dem Drang, mich ständig weiterzuentwickeln, suche ich immer nach neuen Herausforderungen, um meine Fähigkeiten zu erweitern.',
+        `Neugierig und kontinuierlich lernend arbeite ich über den gesamten Technologie-Stack hinweg: 
+        Frontend, Backend, CI/CD, Container-Technologien und Cloud-Infrastruktur – stets mit einem 
+        systemorientierten Blick.`,
+
       TEXT3:
-        'Für mich ist Programmieren mehr als nur das Schreiben von Code - es ist eine kreative Art, Probleme zu lösen und Technologie für jeden zugänglich zu machen.',
+        `Engineering bedeutet für mich, zuverlässige und skalierbare Systeme durch Automatisierung 
+        und DevOps-Best-Practices zu schaffen und komplexe Technologie effizient nutzbar zu machen.`,
+
+
     },
 
     SKILLS: {
       TOP_HEADLINE: 'Technologien',
       HEADLINE: 'Meine Skills',
       TEXT1:
-        'Im Laufe meiner Ausbildung und meiner beruflichen Laufbahn habe ich an vielen Projekten gearbeitet und eine Vielzahl von Frontend-Technologien und -Konzepten angewendet. Ich bin immer offen für neue Technologien und Ansätze, um meine Fähigkeiten kontinuierlich weiterzuentwickeln und in der sich schnell wandelnden Webentwicklung immer einen Schritt voraus zu sein.',
+        `Im Laufe meiner Ausbildung und beruflichen Laufbahn habe ich an vielfältigen Software- und Infrastrukturprojekten gearbeitet und dabei sowohl Full-Stack- als auch DevOps-Technologien 
+        und -Konzepte eingesetzt. Ich bin offen für neue Technologien und moderne Ansätze, um meine Fähigkeiten kontinuierlich weiterzuentwickeln und in den Bereichen Softwareentwicklung, 
+        Cloud und DevOps stets auf dem neuesten Stand zu bleiben.`,
       HEADLINE2: 'Du suchst',
       HEADLINE_SPAN: 'noch mehr Skills?',
       TEXT2: 'Kontaktiere mich gerne, ich freue mich darauf, Neues zu lernen!',
@@ -284,6 +319,24 @@ export const translations = {
       PROJECT2: {
         DESCRIPTION:
           'Spring-, Lauf- und Wurfspiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.',
+      },
+      PROJECT3: {
+        DESCRIPTION:
+          `Coderr ist eine Full-Stack-Service-Marktplattform, die Kunden und Anbieter über strukturierte Angebote und Bestellungen miteinander verbindet.
+          Sie verfügt über ein dynamisches Frontend sowie ein sicheres Backend mit rollenbasierter Zugriffskontrolle, REST-APIs und skalierbarer Datenstruktur.
+          Das Projekt zeigt praxisnah die Umsetzung von Full-Stack-Entwicklung mit sauberer Backend-Architektur und produktionsnaher Ausrichtung.`
+      },
+
+      PROJECT4: {
+        DESCRIPTION:
+          'KanMind ist eine webbasierte Anwendung mit einer klar strukturierten und benutzerfreundlichen Dashboard-Oberfläche. Das Projekt dient dazu, Full-Stack-Entwicklung, API-Anbindung, Authentifizierung und ein produktionsnahes Deployment praktisch umzusetzen.'
+      },
+
+      PROJECT5: {
+        DESCRIPTION:
+          `Videoflix ist eine Full-Stack-Video-Streaming-Plattform, die auf Skalierbarkeit, Performance und Zuverlässigkeit ausgelegt ist.
+           Sie kombiniert ein modernes Frontend mit einem leistungsfähigen Backend inklusive HLS-Streaming, asynchroner Videokonvertierung und cloudfähiger Architektur.
+           Das Projekt zeigt praxisnah den Einsatz von Full-Stack- und DevOps-Technologien – von der Entwicklung bis zum produktiven Betrieb.`,
       },
 
     },
