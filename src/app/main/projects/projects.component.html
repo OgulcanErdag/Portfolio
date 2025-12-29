@@ -46,16 +46,35 @@
           <h3>Coderr</h3>
           <img src="../../../assets/img/arrow_outward.svg" alt="">
         </div>
-        <p>JavaScript | HTML | CSS | Django | REST Framework</p>
+        <p>JavaScript | HTML | CSS | Django</p>
       </div>
+      <div class="project-line"></div>
 
+      <div class="project-details" (click)="onProjectClick(4)" (mouseenter)="setHoveredIndex(4)"
+        (mouseleave)="setHoveredIndex(null)">
+        <div>
+          <h3>KanMind</h3>
+          <img src="../../../assets/img/arrow_outward.svg" alt="">
+        </div>
+        <p>JavaScript | HTML | CSS | Django</p>
+      </div>
+      <div class="project-line"></div>
+
+      <div class="project-details" (click)="onProjectClick(5)" (mouseenter)="setHoveredIndex(5)"
+        (mouseleave)="setHoveredIndex(null)">
+        <div>
+          <h3>Videoflix</h3>
+          <img src="../../../assets/img/arrow_outward.svg" alt="">
+        </div>
+        <p>JavaScript | HTML | CSS | Django | PostgreSQL | Redis</p>
+      </div>
       <div class="project-line"></div>
     </div>
 
     <div class="project-previews">
       @for (preview of previews; track preview; let i = $index) {
       <div class="project-screenshot"
-        [ngStyle]="{'display': hoveredIndex === i ? 'block' : 'none', 'bottom': (130 - i * 95) + 'px'}">
+        [ngStyle]="{'display': hoveredIndex === i ? 'block' : 'none', 'bottom': (130 - i * 50) + 'px'}">
         <img src={{preview}} alt="">
         <div class="square"></div>
       </div>

@@ -17,7 +17,10 @@ export class ProjectsComponent {
   projects = [
     { id: 0, name: 'Join' },
     { id: 1, name: 'DABubble' },
-    { id: 1, name: 'El Pollo Loco' }
+    { id: 2, name: 'El Pollo Loco' },
+    { id: 3, name: 'Coderr' },
+    { id: 4, name: 'KanMind' },
+    { id: 5, name: 'Videoflix' }
   ];
 
   onProjectClick(projectIndex: number) {
@@ -31,6 +34,8 @@ export class ProjectsComponent {
     '../../../assets/img/preview_dabubble.png',
     '../../../assets/img/preview_pollo.png',
     '../../../assets/img/preview_coderr.png',
+    '../../../assets/img/preview_kanmind.png',
+    '../../../assets/img/preview_videoflix.png',
   ];
 
   setHoveredIndex(index: number | null) {
