@@ -7,7 +7,7 @@ import { AboutmeComponent } from '../../main/aboutme/aboutme.component';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterLink, AboutmeComponent],
+  imports: [CommonModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
@@ -33,7 +33,7 @@ export class HeaderComponent {
     return this.translationData.getTranslation(key);
   }
 
-  @HostListener('document:click', ['$event'])
+  @HostListener('document:click')
   closeMobileMenu() {
     this.isMobileMenu = false;
   }
@@ -44,7 +44,7 @@ export class HeaderComponent {
     this.isScrolled = window.scrollY > 0; // Schatten erscheint nach 50px Scrollen
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResize() {
     if (window.innerWidth > 768) {
       // Definiere die Grenze für die Desktop-Ansicht

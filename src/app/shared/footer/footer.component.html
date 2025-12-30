@@ -2,7 +2,7 @@
   <div class="footer-content">
     <div class="footer-left">
       <img src="../../../assets/img/logo.png" alt="Logo" />
-      <p>Web Developer</p>
+      <p>Fullstack & DevOps Engineer</p>
       <p>Stuttgart</p>
     </div>
 
@@ -15,26 +15,18 @@
         <div class="dot"></div>
         <ng-container *ngIf="link.link !== '#'">
           <!-- Externe Links (GitHub, LinkedIn) - immer sichtbar -->
-          <a
-            *ngIf="link.link !== 'mailto:info@ogulcan-erdag.com' && link.link !== '#'"
-            [href]="link.link"
-            [attr.target]="link.target"
-            >{{ link.text }}</a
-          >
+          <a *ngIf="link.link !== 'mailto:info@ogulcan-erdag.com' && link.link !== '#'" [href]="link.link"
+            [attr.target]="link.target">{{ link.text }}</a>
 
           <!-- E-Mail-Link für das Kontaktformular - nur wenn nicht auf Impressum-Seite -->
-          <a
-            *ngIf="link.link === 'mailto:info@ogulcan-erdag.com' && !hideEmailAndImpressumButtons"
-            (click)="scrollToInput('name')"
-            style="cursor: pointer"
-            >{{ link.text }}</a
-          >
+          <a *ngIf="link.link === 'mailto:info@ogulcan-erdag.com' && !hideEmailAndImpressumButtons"
+            (click)="scrollToInput('name')" style="cursor: pointer">{{ link.text }}</a>
         </ng-container>
 
         <!-- Impressum-Link - nur wenn nicht auf Impressum-Seite -->
         <a *ngIf="link.link === '#' && !hideEmailAndImpressumButtons" [routerLink]="'/impressum'">{{
           link.text
-        }}</a>
+          }}</a>
       </div>
     </div>
   </div>
@@ -43,32 +35,24 @@
     <div class="footer-top">
       <div class="footer-left">
         <img src="../../../assets/img/logo.png" alt="Logo" />
-        <p>Web Developer</p>
+        <p>Fullstack & DevOps Engineer</p>
         <p>Stuttgart</p>
       </div>
       <div class="footer-right-mobile">
         <div class="link-right" *ngFor="let link of links">
           <div class="dot"></div>
           <ng-container *ngIf="link.link !== '#'">
-            <a
-              *ngIf="link.link !== 'mailto:info@ogulcan-erdag.com' && link.link !== '#'"
-              [href]="link.link"
-              [attr.target]="link.target"
-              >{{ link.text }}</a
-            >
+            <a *ngIf="link.link !== 'mailto:info@ogulcan-erdag.com' && link.link !== '#'" [href]="link.link"
+              [attr.target]="link.target">{{ link.text }}</a>
 
-            <a
-              *ngIf="link.link === 'mailto:info@ogulcan-erdag.com' && !hideEmailAndImpressumButtons"
-              (click)="scrollToInput('name')"
-              style="cursor: pointer"
-              >{{ link.text }}</a
-            >
+            <a *ngIf="link.link === 'mailto:info@ogulcan-erdag.com' && !hideEmailAndImpressumButtons"
+              (click)="scrollToInput('name')" style="cursor: pointer">{{ link.text }}</a>
           </ng-container>
 
           <!-- Impressum-Link - nur wenn nicht auf Impressum-Seite -->
           <a *ngIf="link.link === '#' && !hideEmailAndImpressumButtons" [routerLink]="'/impressum'">{{
             link.text
-          }}</a>
+            }}</a>
         </div>
       </div>
     </div>
