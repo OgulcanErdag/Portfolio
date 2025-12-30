@@ -21,12 +21,14 @@
   @include dFlex($fd: column, $jc: flex-start, $ai: flex-start);
   width: 568px;
   gap: 10px;
-  > p {
+
+  >p {
     font-size: 16px;
     font-family: "Karla";
     font-weight: 400;
     line-height: 1.3;
-    > span {
+
+    >span {
       font-weight: 700;
       color: $standard-green;
     }
@@ -35,12 +37,14 @@
 
 form {
   @include dFlex($fd: column, $jc: flex-start, $ai: flex-start);
-  > .line {
+
+  >.line {
     height: 1px;
     width: 616px;
     background-color: $standard-green;
   }
-  > p {
+
+  >p {
     font-family: "Karla";
     font-weight: 400;
     font-size: 14px;
@@ -52,9 +56,10 @@ form {
 .contact-field {
   padding: 32px;
   width: 552px;
-  
+
   @include dFlex($fd: column, $jc: flex-start, $ai: flex-start);
   gap: 16px;
+
   &:hover {
     cursor: pointer;
     background-color: rgba(61, 207, 182, 0.15);
@@ -76,10 +81,12 @@ textarea {
   width: 100%;
   height: 20px;
   overflow: hidden;
+
   &:focus {
     outline: none;
     border: none;
   }
+
   font-family: "Karla";
   font-weight: 400;
   font-size: 18px;
@@ -101,16 +108,18 @@ textarea {
   @include dFlex($fd: row, $jc: flex-start, $ai: center);
   gap: 10px;
   padding-top: 32px;
-  > p {
+
+  >p {
     font-family: "Karla";
     font-weight: 400;
     font-size: 15px;
-    > a {
+
+    >a {
       font-family: "Fira Code";
       font-weight: 400;
       font-size: 15px;
       color: $standard-green;
-      
+
     }
   }
 }
@@ -120,6 +129,7 @@ textarea {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+
   &:hover {
     background-color: rgba(61, 207, 182, 0.15);
     cursor: pointer;
@@ -130,10 +140,12 @@ textarea {
   @include dFlex($fd: row, $jc: center, $ai: flex-start);
   width: 100%;
   padding-top: 30px;
-  > button {
+
+  >button {
     color: rgba(255, 255, 255, 0.8);
     border-color: rgba(255, 255, 255, 0.8);
     padding: 10px 20px; // Füge etwas Padding hinzu
+
     &:hover {
       color: rgba(255, 255, 255, 0.8);
       border-color: rgba(255, 255, 255, 0.8);
@@ -142,12 +154,10 @@ textarea {
     }
 
     &:disabled {
-      background-color: rgba(
-        255,
-        255,
-        255,
-        0.2
-      ); // Deaktivierte Hintergrundfarbe
+      background-color: rgba(255,
+          255,
+          255,
+          0.2); // Deaktivierte Hintergrundfarbe
       color: rgba(255, 255, 255, 0.5); // Deaktivierte Textfarbe
       cursor: not-allowed; // Zeigt, dass der Button nicht anklickbar ist
       opacity: 0.6; // Macht den Button halbtransparent
@@ -161,37 +171,47 @@ textarea {
 }
 
 .highlight {
-  background-color: #0c3e35; /* Hintergrundfarbe auf das gesamte Input-Feld */
-  color: white; /* Optional: Textfarbe anpassen, damit es lesbar bleibt */
-  transition: background-color 0.5s ease-in-out, filter 0.5s ease-in-out; /* Glatter Übergangseffekt */
-  filter: brightness(1.2); /* Erhöht die Helligkeit um 20% */
+  background-color: #0c3e35;
+  /* Hintergrundfarbe auf das gesamte Input-Feld */
+  color: white;
+  /* Optional: Textfarbe anpassen, damit es lesbar bleibt */
+  transition: background-color 0.5s ease-in-out, filter 0.5s ease-in-out;
+  /* Glatter Übergangseffekt */
+  filter: brightness(1.2);
+  /* Erhöht die Helligkeit um 20% */
 }
 
 @media (max-width: 1450px) {
   #contacts-container {
     padding-bottom: 40px;
   }
+
   .contacts-content {
     @include dFlex($fd: column, $jc: flex-start, $ai: center);
     gap: 64px;
     width: 90%;
     @include margin-sides($le: 0px, $ri: 0px);
   }
+
   .contacts-left {
     max-width: 616px;
     width: 100%;
   }
+
   .contacts-right {
     max-width: 616px;
     width: 100%;
   }
+
   form {
-    > .line {
+    >.line {
       width: 100%;
     }
+
     .contact-field {
       width: 100%;
       box-sizing: border-box;
+      
     }
   }
 }
@@ -200,10 +220,12 @@ textarea {
   h1 {
     font-size: 40px;
   }
+
   h3,
   h2 {
     font-size: 20px;
   }
+
   .contact-field {
     padding-left: 10px;
     padding-right: 10px;
@@ -212,9 +234,11 @@ textarea {
 
     gap: 10px;
   }
+
   label {
     font-size: 18px;
   }
+
   .check-area {
     padding-top: 50px;
     padding-bottom: 20px;

@@ -25,6 +25,8 @@ export class ContactComponent implements OnInit {
   showCheckboxError = false;
   successMail = false;
   mailTest = false;
+  invalid: boolean = false;
+  touched: boolean = false;
 
   translationData = inject(TranslationsService);
   activeLang: 'en' | 'de' = 'en';
@@ -69,13 +71,13 @@ export class ContactComponent implements OnInit {
       this.contactData.email.length > 0 &&
       !this.isEmailValid(this.contactData.email)
     ) {
-      this.contactData.email = ''; 
+      this.contactData.email = '';
     }
   }
 
   checkEmailValidity() {
     if (!this.isEmailValid(this.contactData.email)) {
-      this.contactData.email = ''; 
+      this.contactData.email = '';
     }
   }
 
@@ -196,20 +198,20 @@ export class ContactComponent implements OnInit {
 
 
   scrollToInput(inputId: string) {
-    const inputElement = document.getElementById(inputId);  
-  
+    const inputElement = document.getElementById(inputId);
+
     if (inputElement) {
-      inputElement.scrollIntoView({ behavior: 'smooth', block: 'center' });  
-  
+      inputElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
       setTimeout(() => {
-        inputElement.focus();  
-        inputElement.classList.add('highlight'); 
-        
+        inputElement.focus();
+        inputElement.classList.add('highlight');
+
         setTimeout(() => {
           inputElement.classList.remove('highlight');
         }, 2000);
-      }, 500); 
+      }, 500);
     }
   }
-  
+
 }
