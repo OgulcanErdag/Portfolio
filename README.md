@@ -1,27 +1,119 @@
-# Portfolio
+# Portfolio – Full-Stack & DevOps Engineer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+This repository contains my personal **portfolio website**, showcasing selected projects, skills, and my transition from frontend development to **Full-Stack & DevOps engineering**.
 
-## Development server
+The portfolio is built with **Angular** and designed as a modern, performant single-page application (SPA), focusing on clean architecture, scalability, and maintainability.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🚀 Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The portfolio highlights:
 
-## Build
+- Full-Stack projects such as **Videoflix** and **Coderr**
+- A modern **DevOps-oriented tech stack**
+- Clean UI, responsive design, and optimized assets
+- Production-ready build and deployment workflow
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The site is intended for **recruiters, engineers, and technical decision-makers** who want a clear and structured overview of my skills and experience.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🧱 Tech Stack
 
-## Running end-to-end tests
+### Frontend
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Angular (Standalone components)
+- TypeScript
+- HTML5 / SCSS
+- Responsive Design
 
-## Further help
+### Backend & Full-Stack
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Django / REST APIs (project showcase)
+- PostgreSQL
+- Authentication & role-based access concepts
+
+### DevOps & Cloud
+
+- Docker
+- Kubernetes
+- CI/CD concepts
+- Linux
+- AWS & Azure fundamentals
+- Terraform (Infrastructure as Code)
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+ ├── app/
+ │   ├── main/        # Core sections (start, projects, skills, contact)
+ │   ├── shared/      # Header, footer, shared UI
+ │   └── models/      # Interfaces & typing
+ ├── assets/
+ │   ├── img/skills   # Skill & tech icons
+ │   └── img/         # Project previews & assets
+ └── styles.scss      # Global styles
+```
+
+🛠 Development
+Install dependencies
+npm install
+
+Run development server
+ng serve
+
+Navigate to:
+
+http://localhost:4200
+
+The app reloads automatically on file changes.
+
+🏗 Production Build
+
+Create an optimized production build:
+
+ng build
+
+Build output:
+
+dist/portfolio/
+
+🔍 Local Preview of Production Build
+
+To preview the production build locally:
+
+npx serve dist/portfolio
+
+Open:
+
+http://localhost:3000
+
+🚢 Deployment
+
+The application is designed for static hosting, for example:
+
+Nginx (VPS / Server)
+
+AWS S3 + CloudFront
+
+Other static hosting platforms
+
+Note: The dist/ directory is not committed to Git and is generated per deployment.
+
+🎯 Purpose
+
+This portfolio reflects my professional journey toward Full-Stack & DevOps Engineering, with a strong focus on:
+
+Clean code
+
+System-oriented thinking
+
+Automation and scalability
+
+Production-ready applications
+
+---
