@@ -1,4 +1,4 @@
-@import './mixins.scss';
+@import "./mixins.scss";
 
 html {
   scroll-behavior: smooth;
@@ -9,11 +9,10 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: rgb(192, 199, 192);
-  font-family: 'Fira Code';
+  font-family: "Fira Code";
   font-weight: 400;
   overflow-x: hidden;
   /* Für Webkit-basierte Browser (Chrome, Safari, Edge) */
-
 }
 
 ::-webkit-scrollbar {
@@ -21,13 +20,11 @@ body {
   /* Sehr schmale Scrollbar */
   height: 10px;
   /* Für horizontale Scrollbars */
-  background-color: #1C1C1C;
-
+  background-color: #1c1c1c;
 }
 
-
 ::-webkit-scrollbar-thumb {
-  background-color: #3DCFB6;
+  background-color: #3dcfb6;
   /* Schwarze Scrollbar */
   /* Runde Ecken */
   /* Rahmen in der gewünschten Farbe */
@@ -54,7 +51,7 @@ button {
   height: 48px;
   border: 1px solid white;
   border-radius: 24px;
-  font-family: 'Karla';
+  font-family: "Karla";
   font-size: 18px;
   color: white;
   background-color: transparent;
@@ -85,7 +82,7 @@ button span {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #6AD7BF;
+  background-color: #6ad7bf;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -108,7 +105,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Karla';
+  font-family: "Karla";
   font-weight: 500;
   color: $standard-green;
   font-size: 24px;
@@ -116,15 +113,14 @@ h3 {
   margin-block-end: 0;
 }
 
-
 /* fira-code-300 - latin */
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Fira Code';
+  font-family: "Fira Code";
   font-style: normal;
   font-weight: 300;
-  src: url('./assets/fonts/fira-code-v22-latin-300.woff2') format('woff2');
+  src: url("./assets/fonts/fira-code-v22-latin-300.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -132,10 +128,10 @@ h3 {
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Fira Code';
+  font-family: "Fira Code";
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/fira-code-v22-latin-regular.woff2') format('woff2');
+  src: url("./assets/fonts/fira-code-v22-latin-regular.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -143,10 +139,10 @@ h3 {
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Fira Code';
+  font-family: "Fira Code";
   font-style: normal;
   font-weight: 500;
-  src: url('./assets/fonts/fira-code-v22-latin-500.woff2') format('woff2');
+  src: url("./assets/fonts/fira-code-v22-latin-500.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -154,10 +150,10 @@ h3 {
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Fira Code';
+  font-family: "Fira Code";
   font-style: normal;
   font-weight: 600;
-  src: url('./assets/fonts/fira-code-v22-latin-600.woff2') format('woff2');
+  src: url("./assets/fonts/fira-code-v22-latin-600.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -165,10 +161,10 @@ h3 {
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Fira Code';
+  font-family: "Fira Code";
   font-style: normal;
   font-weight: 700;
-  src: url('./assets/fonts/fira-code-v22-latin-700.woff2') format('woff2');
+  src: url("./assets/fonts/fira-code-v22-latin-700.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -176,10 +172,10 @@ h3 {
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Karla';
+  font-family: "Karla";
   font-style: normal;
   font-weight: 700;
-  src: url('./assets/fonts/karla-v31-latin-700.woff2') format('woff2');
+  src: url("./assets/fonts/karla-v31-latin-700.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -187,10 +183,10 @@ h3 {
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Karla';
+  font-family: "Karla";
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/karla-v31-latin-regular.woff2') format('woff2');
+  src: url("./assets/fonts/karla-v31-latin-regular.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -198,9 +194,9 @@ h3 {
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Karla';
+  font-family: "Karla";
   font-style: normal;
   font-weight: 500;
-  src: url('./assets/fonts/karla-v31-latin-500.woff2') format('woff2');
+  src: url("./assets/fonts/karla-v31-latin-500.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
