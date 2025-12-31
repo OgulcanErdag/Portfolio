@@ -9,19 +9,49 @@ import { TranslationsService } from '../../services/translations.service';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-
 export class ProjectsComponent {
 
   @Output() projectClicked = new EventEmitter<number>();
 
-  projects = [
-    { id: 0, name: 'Join' },
-    { id: 1, name: 'DABubble' },
-    { id: 2, name: 'El Pollo Loco' },
-    { id: 3, name: 'Coderr' },
-    { id: 4, name: 'KanMind' },
-    { id: 5, name: 'Videoflix' }
+  // Accordion state
+  activeGroup: 'fullstack' | 'handsOn' | 'devops' | null = null;
+
+
+
+  toggleGroup(group: 'fullstack' | 'handsOn' | 'devops') {
+    if (group === 'devops') return;
+    this.activeGroup = this.activeGroup === group ? null : group;
+  }
+
+  // Hands-on collections (repo links)
+  handsOnCollections = [
+    {
+      title: 'AWS Hands-On',
+      tech: 'EC2 | IAM | VPC | S3 | ALB/ASG | CloudFormation',
+      url: 'https://github.com/OgulcanErdag/AWS_Hands_On',
+    },
+    {
+      title: 'AWS Mini Projects',
+      tech: 'Cloud mini apps & demos (various AWS services)',
+      url: 'https://github.com/OgulcanErdag/aws-projects.git',
+    },
+    {
+      title: 'Phonebook Web App',
+      tech: 'Full-stack cloud-ready web application',
+      url: 'https://github.com/OgulcanErdag/phonebook-web-app.git',
+    },
+    {
+      title: 'Linux Hands-On',
+      tech: 'Linux fundamentals, bash, users, services, networking',
+      url: 'https://github.com/OgulcanErdag/Linux_Hands_On.git',
+    },
+    {
+      title: 'Linux DevOps Automation Suite',
+      tech: 'Bash | Automation | DevOps system tooling',
+      url: 'https://github.com/OgulcanErdag/linux-devops-automation-suite.git',
+    },
   ];
+
 
   onProjectClick(projectIndex: number) {
     this.projectClicked.emit(projectIndex);
