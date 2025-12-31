@@ -5,6 +5,21 @@
     <p>{{ getTranslation('PORTFOLIO.TEXT1') }} <br>{{ getTranslation('PORTFOLIO.TEXT2') }}</p>
 
     <div class="projects-list">
+
+      <!-- GROUP 1: Frontend & Backend Projects -->
+      <div class="project-line"></div>
+
+      <div class="project-details group-header" (click)="toggleGroup('fullstack')">
+        <div>
+          <h3>Frontend & Backend Projects</h3>
+          <img src="../../../assets/img/arrow_outward.svg" alt="" class="group-icon"
+            [class.open]="activeGroup === 'fullstack'">
+        </div>
+        <p>Apps • Full-Stack</p>
+      </div>
+
+      @if (activeGroup === 'fullstack') {
+
       <div class="project-line"></div>
 
       <div class="project-details" (click)="onProjectClick(0)" (mouseenter)="setHoveredIndex(0)"
@@ -24,7 +39,7 @@
           <h3>DABubble</h3>
           <img src="../../../assets/img/arrow_outward.svg" alt="">
         </div>
-        <p>TypeScript | Angular | Firebase | HTML | CSS </p>
+        <p>TypeScript | Angular | Firebase | HTML | CSS</p>
       </div>
 
       <div class="project-line"></div>
@@ -48,6 +63,7 @@
         </div>
         <p>JavaScript | HTML | CSS | Django</p>
       </div>
+
       <div class="project-line"></div>
 
       <div class="project-details" (click)="onProjectClick(4)" (mouseenter)="setHoveredIndex(4)"
@@ -58,6 +74,7 @@
         </div>
         <p>JavaScript | HTML | CSS | Django</p>
       </div>
+
       <div class="project-line"></div>
 
       <div class="project-details" (click)="onProjectClick(5)" (mouseenter)="setHoveredIndex(5)"
@@ -68,17 +85,62 @@
         </div>
         <p>JavaScript | HTML | CSS | Django | PostgreSQL | Redis</p>
       </div>
+      }
+
+      <!-- GROUP 2: AWS & Linux Hands-On & Projects -->
       <div class="project-line"></div>
+
+      <div class="project-details group-header" (click)="toggleGroup('handsOn')">
+        <div>
+          <h3>AWS & Linux Hands-On & Projects</h3>
+          <img src="../../../assets/img/arrow_outward.svg" alt="" class="group-icon"
+            [class.open]="activeGroup === 'handsOn'">
+        </div>
+        <p>Labs • GitHub</p>
+      </div>
+
+      @if (activeGroup === 'handsOn') {
+
+      <div class="project-line"></div>
+
+      @for (c of handsOnCollections; track c.title) {
+      <a class="project-details collection-details collection-row-link" [href]="c.url" target="_blank" rel="noopener">
+        <div>
+          <h3>{{ c.title }}</h3>
+        </div>
+
+        <div class="collection-right">
+          <p>{{ c.tech }}</p>
+          <img src="../../../assets/img/arrow_outward.svg" alt="">
+        </div>
+      </a>
+
+      <div class="project-line"></div>
+      }
+      }
+
+      <!-- GROUP 3: DevOps Hands-On (Coming Soon) -->
+      <div class="project-details group-header coming-soon" (click)="toggleGroup('devops')">
+        <div>
+          <h3>DevOps Hands-On & Projects (Coming Soon)</h3>
+          <img src="../../../assets/img/arrow_outward.svg" alt="" class="group-icon">
+        </div>
+        <p>Kubernetes • Docker • Terraform • Ansible • Jenkins</p>
+      </div>
+
+      <div class="project-line"></div>
+
     </div>
 
     <div class="project-previews">
       @for (preview of previews; track preview; let i = $index) {
       <div class="project-screenshot"
         [ngStyle]="{'display': hoveredIndex === i ? 'block' : 'none', 'bottom': (130 - i * 50) + 'px'}">
-        <img src={{preview}} alt="">
+        <img src="{{ preview }}" alt="">
         <div class="square"></div>
       </div>
       }
     </div>
+
   </div>
 </div>
