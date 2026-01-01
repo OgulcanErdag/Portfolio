@@ -42,7 +42,7 @@ export class ProjectsComponent {
     },
     {
       title: 'Linux Hands-On',
-      tech: 'Linux fundamentals, bash, users, services, networking',
+      tech: 'Linux fundamentals | bash | users | services | networking',
       url: 'https://github.com/OgulcanErdag/Linux_Hands_On.git',
     },
     {

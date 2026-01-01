@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 
 export class SkillsComponent {
 
-  skills: Array<{ img: string, text: string }> = [
+  skills: Array<{ img: string, text: string, key?: string }> = [
     { 'img': '../../../assets/img/skills/html.png', 'text': 'HTML' },
     { 'img': '../../../assets/img/skills/css-3.png', 'text': 'CSS' },
     { 'img': '../../../assets/img/skills/js.png', 'text': 'JavaScript' },
@@ -30,7 +30,7 @@ export class SkillsComponent {
     { 'img': '../../../assets/img/skills/terraform.png', 'text': 'Terraform' },
     { 'img': '../../../assets/img/skills/jenkins.png', 'text': 'Jenkins' },
     { 'img': '../../../assets/img/skills/ansible.png', 'text': 'Ansible' },
-    { 'img': '../../../assets/img/skills/aws.png', 'text': 'Amazon Web Services' },
+    { 'img': '../../../assets/img/skills/aws.png', 'text': 'AWS', key: 'aws' },
     { 'img': '../../../assets/img/skills/azure.png', 'text': 'Azure' },
     { 'img': '../../../assets/img/skills/skill11.png', 'text': 'Growth mindset' },
 

@@ -1,4 +1,3 @@
-
 <div id="skills-container">
   <div class="skills-content" id="skills-content"> <br>
     <h3>{{ getTranslation('SKILLS.TOP_HEADLINE') }}</h3>
@@ -18,33 +17,33 @@
 
       <div class="skills-icons">
         @for (skill of skills; track skill.text; let index = $index) {
-          @if (index === skills.length - 1) {
-            <div class="bubble-container">
-              <div class="speech-bubble" #bubbleRef [style.display]="isBubbleVisible ? 'block' : 'none'">
-                <p>{{ getTranslation('SKILLS.BUBBLE') }}</p>
-                <div class="skills-bubble">
-                  <div class="skill-bubble">
-                    <img src="../../../assets/img/skills/react.png" alt="React">
-                    <p>React</p>
-                  </div>
-                  <div class="skill-bubble">
-                    <img src="../../../assets/img/skills/vue.png" alt="Vue">
-                    <p>Vue</p>
-                  </div>
-                </div>
+        @if (index === skills.length - 1) {
+        <div class="bubble-container">
+          <div class="speech-bubble" #bubbleRef [style.display]="isBubbleVisible ? 'block' : 'none'">
+            <p>{{ getTranslation('SKILLS.BUBBLE') }}</p>
+            <div class="skills-bubble">
+              <div class="skill-bubble">
+                <img src="../../../assets/img/skills/react.png" alt="React">
+                <p>React</p>
               </div>
+              <div class="skill-bubble">
+                <img src="../../../assets/img/skills/vue.png" alt="Vue">
+                <p>Vue</p>
+              </div>
+            </div>
+          </div>
 
-              <div class="skill-icon" (click)="openBubble($event)">
-                <img src="{{skill.img}}" alt="{{skill.text}}">
-                <p [ngStyle]="{'color': isBubbleVisible ? 'rgba(61,207,182,1)' : 'white'}">{{skill.text}}</p>
-              </div>
-            </div>
-          } @else {
-            <div class="skill-icon">
-              <img src="{{skill.img}}" alt="{{skill.text}}">
-              <p>{{skill.text}}</p>
-            </div>
-          }
+          <div class="skill-icon" (click)="openBubble($event)">
+            <img [src]="skill.img" [alt]="skill.text" [class.aws]="skill.key === 'aws'">
+            <p [ngStyle]="{'color': isBubbleVisible ? 'rgba(61,207,182,1)' : 'white'}">{{ skill.text }}</p>
+          </div>
+        </div>
+        } @else {
+        <div class="skill-icon">
+          <img [src]="skill.img" [alt]="skill.text" [class.aws]="skill.key === 'aws'">
+          <p>{{ skill.text }}</p>
+        </div>
+        }
         }
       </div>
     </div>
