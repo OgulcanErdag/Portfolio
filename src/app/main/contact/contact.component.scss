@@ -1,5 +1,29 @@
 @import "../../../mixins.scss";
 
+/* ===== Autofill (no white/black box) ===== */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+input:-internal-autofill-selected,
+textarea:-internal-autofill-selected {
+  -webkit-text-fill-color: rgba(255, 255, 255, 1) !important;
+  caret-color: rgba(255, 255, 255, 1) !important;
+
+  /* IMPORTANT: do NOT paint a solid background -> keep it transparent */
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  filter: none !important;
+
+  transition: background-color 99999s ease-out 0s !important;
+}
+
 #contacts-container {
   width: 100%;
   position: relative;
@@ -75,6 +99,8 @@ label {
 
 input,
 textarea {
+  -webkit-appearance: none;
+  appearance: none;
   background-color: transparent;
   border-style: none;
   resize: none;
@@ -82,9 +108,14 @@ textarea {
   height: 20px;
   overflow: hidden;
 
-  &:focus {
+  &:focus,
+  &:active {
     outline: none;
     border: none;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
   }
 
   font-family: "Karla";
