@@ -85,12 +85,12 @@ export class MainComponent {
   showLayer(projectIndex: number) {
     this.currentProjectIndex = projectIndex;
     this.isProjectLayerVisible = true;
-    document.body.style.overflow = 'hidden';  // Scrollen verhindern
+    document.body.style.overflow = 'hidden';
   }
 
   hideLayer() {
     this.isProjectLayerVisible = false;
-    document.body.style.overflow = ''; // Scrollen wieder aktivieren
+    document.body.style.overflow = '';
   }
 
   nextProject() {

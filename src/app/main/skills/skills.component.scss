@@ -66,10 +66,9 @@
     height: 60px;
     object-fit: contain;
     display: block;
-    transition: transform 150ms ease; /* ✅ hover geçişi pürüzsüz */
+    transition: transform 150ms ease;
   }
 
-  /* ✅ sadece AWS için optik büyütme */
   > img.aws {
     transform: scale(1.25);
   }
@@ -80,12 +79,10 @@
     text-align: center;
   }
 
-  /* ✅ Genel hover (aws hariç hepsi 1.1) */
   &:hover > img {
     transform: scale(1.1);
   }
 
-  /* ✅ AWS hover: 1.25 yerine daha da büyüsün */
   &:hover > img.aws {
     transform: scale(1.35);
   }
