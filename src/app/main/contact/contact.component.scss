@@ -76,27 +76,24 @@ label {
 input,
 textarea {
   background-color: transparent;
-  border: none;
+  border-style: none;
   resize: none;
   width: 100%;
-
   height: 20px;
-  line-height: 20px;
   overflow: hidden;
-
-  font-family: "Karla";
-  font-weight: 400;
-  font-size: 18px;
-  color: rgba(255, 255, 255, 1);
 
   &:focus {
     outline: none;
     border: none;
   }
+
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
 }
 
-input::placeholder,
-textarea::placeholder {
+::placeholder {
   font-family: "Karla";
   font-weight: 400;
   font-size: 18px;
@@ -105,22 +102,6 @@ textarea::placeholder {
 
 .invalid-placeholder::placeholder {
   color: rgba(236, 123, 123, 0.8);
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus {
-  -webkit-text-fill-color: rgba(255, 255, 255, 1) !important;
-  caret-color: rgba(255, 255, 255, 1) !important;
-
-  -webkit-box-shadow: 0 0 0px 1000px $standard-background inset !important;
-  box-shadow: 0 0 0px 1000px $standard-background inset !important;
-
-  background-color: transparent !important;
-  transition: background-color 9999s ease-out 0s !important;
 }
 
 .check-area {
@@ -162,19 +143,26 @@ textarea:-webkit-autofill:focus {
   > button {
     color: rgba(255, 255, 255, 0.8);
     border-color: rgba(255, 255, 255, 0.8);
-    padding: 10px 20px;
+    padding: 10px 20px; // Füge etwas Padding hinzu
 
     &:hover {
+      color: rgba(255, 255, 255, 0.8);
+      border-color: rgba(255, 255, 255, 0.8);
       background-color: rgba(61, 207, 182, 0.15);
       cursor: pointer;
     }
 
     &:disabled {
-      background-color: rgba(255, 255, 255, 0.2);
-      color: rgba(255, 255, 255, 0.5);
-      cursor: not-allowed;
-      opacity: 0.6;
-      border-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(
+        255,
+        255,
+        255,
+        0.2
+      ); // Deaktivierte Hintergrundfarbe
+      color: rgba(255, 255, 255, 0.5); // Deaktivierte Textfarbe
+      cursor: not-allowed; // Zeigt, dass der Button nicht anklickbar ist
+      opacity: 0.6; // Macht den Button halbtransparent
+      border-color: rgba(255, 255, 255, 0.5); // Deaktivierte Rahmenfarbe
     }
   }
 }
@@ -185,7 +173,74 @@ textarea:-webkit-autofill:focus {
 
 .highlight {
   background-color: #0c3e35;
+  /* Hintergrundfarbe auf das gesamte Input-Feld */
   color: white;
+  /* Optional: Textfarbe anpassen, damit es lesbar bleibt */
   transition: background-color 0.5s ease-in-out, filter 0.5s ease-in-out;
+  /* Glatter Übergangseffekt */
   filter: brightness(1.2);
+  /* Erhöht die Helligkeit um 20% */
+}
+
+@media (max-width: 1450px) {
+  #contacts-container {
+    padding-bottom: 40px;
+  }
+
+  .contacts-content {
+    @include dFlex($fd: column, $jc: flex-start, $ai: center);
+    gap: 64px;
+    width: 90%;
+    @include margin-sides($le: 0px, $ri: 0px);
+  }
+
+  .contacts-left {
+    max-width: 616px;
+    width: 100%;
+  }
+
+  .contacts-right {
+    max-width: 616px;
+    width: 100%;
+  }
+
+  form {
+    > .line {
+      width: 100%;
+    }
+
+    .contact-field {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h3,
+  h2 {
+    font-size: 20px;
+  }
+
+  .contact-field {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    gap: 10px;
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  .check-area {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
 }
