@@ -65,8 +65,11 @@ export class SkillsComponent {
 
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (!element) return;
+
+    const yOffset = -140;
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
   }
 }
