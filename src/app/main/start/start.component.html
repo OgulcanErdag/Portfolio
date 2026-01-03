@@ -6,6 +6,7 @@
       Ogulcan<br />
       Erdag
     </p>
+
     <div class="start-buttons">
       <button (click)="scrollToSection('projects')">
         <span>{{ getTranslation("START.BUTTON1") }}</span>
@@ -39,15 +40,22 @@
       </div>
 
       <div class="line-element-right">
-        <a href="mailto:info@ogulcan-erdag.com">info&#64;ogulcan-erdag.com</a>
-        <div class="start-some">
+        <a class="mail-link" href="mailto:info@ogulcan-erdag.com">
+          info&#64;ogulcan-erdag.com
+        </a>
+
+        <a class="start-some" href="https://github.com/OgulcanErdag" target="_blank" rel="noopener noreferrer"
+          aria-label="Open GitHub profile">
           <img src="../../../assets/img/github-green.svg" alt="GitHub" />
           <div class="link-dot"></div>
-        </div>
-        <div class="start-some">
+        </a>
+
+        <a class="start-some" href="https://www.linkedin.com/in/ogulcanerdag/" target="_blank" rel="noopener noreferrer"
+          aria-label="Open LinkedIn profile">
           <img src="../../../assets/img/linkedin-green.svg" alt="LinkedIn" />
           <div class="link-dot"></div>
-        </div>
+        </a>
+
         <div class="line-right"></div>
       </div>
     </div>
