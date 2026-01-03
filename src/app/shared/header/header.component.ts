@@ -27,6 +27,9 @@ export class HeaderComponent {
   setActiveLang(lang: 'en' | 'de') {
     this.activeLang = lang;
     this.translationData.setLanguage(lang);
+    if (this.isMobileMenu) {
+      this.isMobileMenu = false;
+    }
   }
 
   getTranslation(key: string): string {
@@ -41,7 +44,7 @@ export class HeaderComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const offset = window.pageYOffset;
-    this.isScrolled = window.scrollY > 0; // Schatten erscheint nach 50px Scrollen
+    this.isScrolled = window.scrollY > 0;
   }
 
   @HostListener('window:resize')
