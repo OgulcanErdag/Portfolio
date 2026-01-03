@@ -10,6 +10,8 @@
 .title-box {
   @include dFlex($fd: column, $jc: center, $ai: center);
   color: white;
+  position: relative;
+  z-index: 1;
   > .jobtitle {
     font-size: 40px;
     text-align: center;
@@ -145,7 +147,7 @@
   width: 20px;
   z-index: 1;
   @include dFlex($fd: column, $jc: flex-end, $ai: center);
-  > a {
+  > a.mail-link {
     font-family: "Karla";
     font-weight: 400;
     font-size: 18px;
@@ -171,6 +173,8 @@
   gap: 4px;
   padding-left: 12px;
   margin-top: 12px;
+  text-decoration: none;
+  color: inherit;
 
   &:hover .link-dot {
     opacity: 1;
@@ -196,7 +200,7 @@
     @include margin-sides($le: 0px, $ri: 0px);
     @include dFlex($fd: row, $jc: space-between, $ai: flex-end);
   }
-  .line-element-right a {
+  .line-element-right a.mail-link {
     display: none;
   }
   .banderole {
