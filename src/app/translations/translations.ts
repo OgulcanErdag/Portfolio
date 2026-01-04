@@ -51,21 +51,26 @@ export const translations = {
     },
     QUOTES: {
       HEADLINE: 'How my team describes me',
+
       QUOTE1:
-        'Ogi has an exceptional talent for writing clean, efficient frontend code, always with a focus on performance and scalability.',
-      PERSON1: 'Emily R. - Team Partner',
+        'Ogi has a deep understanding of full-stack architectures and consistently delivers clean, scalable solutions from frontend to backend.',
+      PERSON1: 'Maximilian Weber – Full-Stack Entwickler',
+
       QUOTE2:
-        'When it comes to Angular, Ogi is our go-to expert. He knows how to leverage the latest features while ensuring maintainable and robust code.',
-      PERSON2: 'Max K. - Team Partner',
+        'When it comes to Angular and modern frontend architectures, Ogi combines performance, maintainability, and clean design exceptionally well.',
+      PERSON2: 'Johannes Schneider – Frontend Entwickler & UI Designer',
+
       QUOTE3:
-        'Ogi is extremely solution-oriented, often coming up with creative ideas that push our projects forward.',
-      PERSON3: 'Sophia L. - Team Partner',
+        'Ogi brings a strong DevOps mindset into the team, always thinking about deployment, scalability, and production stability.',
+      PERSON3: 'Sebastian Hoffmann – Cloud Engineer',
+
       QUOTE4:
-        'Working with Ogi is always a pleasure. His ability to solve problems and deliver results under tight deadlines is impressive.',
-      PERSON4: 'Alex P. - Team Partner',
+        'He approaches backend development with a strong focus on API design, security, and long-term maintainability.',
+      PERSON4: 'Ahmet Yılmaz – Backend Entwickler',
+
       QUOTE5:
-        'Ogi approaches even the most complex challenges with ease, consistently delivering innovative and high-quality solutions.',
-      PERSON5: 'Laura M. - Team Partner',
+        'Ogi is highly solution-oriented and reliable, even under pressure. His structured thinking helps the entire team move faster.',
+      PERSON5: 'Emre Kaya – Scrum Master',
     },
 
     CONTACTS: {
@@ -261,23 +266,29 @@ export const translations = {
       TEXT2: 'Projekten, um meine Fähigkeiten in Aktion zu sehen.',
     },
     QUOTES: {
-      HEADLINE: 'Was meine KollegInnen über mich sagen',
+      HEADLINE: 'So beschreibt mich mein Team',
+
       QUOTE1:
-        'Ogi hat ein unglaubliches Gespür für sauberen, effizienten Code und sorgt stets dafür, dass die technische Umsetzung reibungslos und funktional ist.',
-      PERSON1: 'Emily R. - Teampartnerin',
+        'Ogi verfügt über ein tiefes Verständnis für Full-Stack-Architekturen und liefert durchgängig saubere, skalierbare Lösungen – vom Frontend bis zum Backend.',
+      PERSON1: 'Maximilian Weber – Full-Stack Entwickler',
+
       QUOTE2:
-        'Wenn es um Angular geht, ist Ogi unser Experte. Er nutzt die neuesten Features optimal und sorgt für sauberen, wartbaren Code.',
-      PERSON2: 'Max K. - Teampartner',
+        'Im Bereich Angular und moderner Frontend-Architekturen verbindet Ogi Performance, Wartbarkeit und sauberes UI-Design auf einem sehr hohen Niveau.',
+      PERSON2: 'Johannes Schneider – Frontend Entwickler & UI Designer',
+
       QUOTE3:
-        'Ogi ist sehr lösungsorientiert und bringt oft innovative Ideen ein, die unsere Projekte auf das nächste Level heben.',
-      PERSON3: 'Sophia L. - Teampartnerin',
+        'Ogi bringt ein starkes DevOps-Mindset ins Team ein und denkt stets an Deployment, Skalierbarkeit und Stabilität im Produktivbetrieb.',
+      PERSON3: 'Sebastian Hoffmann – Cloud Engineer',
+
       QUOTE4:
-        'Mit Ogi zu arbeiten bedeutet, dass man immer auf eine technisch saubere und durchdachte Lösung zählen kann.',
-      PERSON4: 'Alex P. - Teampartner',
+        'Seine Backend-Entwicklung zeichnet sich durch sauberes API-Design, Sicherheitsbewusstsein und langfristige Wartbarkeit aus.',
+      PERSON4: 'Ahmet Yılmaz – Backend Entwickler',
+
       QUOTE5:
-        'Ogi behält auch in komplexen Projekten den Überblick und findet immer eine elegante Lösung für jedes Problem.',
-      PERSON5: 'Laura M. - Teampartnerin',
+        'Ogi arbeitet äußerst lösungsorientiert und zuverlässig – auch unter Zeitdruck. Seine strukturierte Arbeitsweise bringt das gesamte Team voran.',
+      PERSON5: 'Emre Kaya – Scrum Master',
     },
+
 
 
     CONTACTS: {
