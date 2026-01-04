@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener, inject } from '@angular/core';
 import { TranslationsService } from '../../services/translations.service';
 import { Router, RouterLink } from '@angular/router';
-import { AboutmeComponent } from '../../main/aboutme/aboutme.component';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +16,12 @@ export class HeaderComponent {
 
   private router = inject(Router);
   translationData = inject(TranslationsService);
-  activeLang: 'en' | 'de' = 'en';
+
+  activeLang: 'en' | 'de' = 'de';
+
+  constructor() {
+    this.activeLang = this.translationData.getCurrentLanguage();
+  }
 
   toggleMobileMenu(event: Event) {
     event.stopPropagation();
@@ -43,40 +47,35 @@ export class HeaderComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const offset = window.pageYOffset;
     this.isScrolled = window.scrollY > 0;
   }
 
   @HostListener('window:resize')
   onResize() {
     if (window.innerWidth > 768) {
-      // Definiere die Grenze für die Desktop-Ansicht
-      this.isMobileMenu = false; // Schließt das Menü, wenn die Breite größer ist
+      this.isMobileMenu = false;
     }
   }
 
   scrollToSection(sectionId: string) {
-    this.isMobileMenu = false; // Schließt das mobile Menü, wenn ein Link geklickt wird
+    this.isMobileMenu = false;
 
-    // Navigiere zur Hauptseite
     this.router.navigate(['/']).then(() => {
-      // Verwende setTimeout, um sicherzustellen, dass die Navigation abgeschlossen ist, bevor du scrollst
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
-          // Berechne die Höhe des Headers
           const headerOffset =
             document.querySelector('#header-container')?.clientHeight || 0;
           const elementPosition =
             element.getBoundingClientRect().top + window.pageYOffset;
-          const offsetPosition = elementPosition - headerOffset; // Berücksichtige die Header-Höhe
+          const offsetPosition = elementPosition - headerOffset;
 
           window.scrollTo({
             top: offsetPosition,
             behavior: 'smooth',
           });
         }
-      }, 100); // Ein kleiner Delay, um sicherzustellen, dass die Navigation abgeschlossen ist
+      }, 100);
     });
   }
 
