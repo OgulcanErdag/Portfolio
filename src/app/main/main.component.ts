@@ -72,7 +72,7 @@ export class MainComponent {
       description: `Videoflix is a full-stack video streaming platform designed to deliver scalable, high-performance media experiences.
       It combines a modern frontend with a robust backend, featuring HLS streaming, asynchronous video processing, and cloud-ready architecture.
       The project demonstrates real-world use of Full-Stack and DevOps practices, from application development to deployment and operations.`,
-      skills: ['CSS', 'HTML', 'JavaScript', 'Django', 'PostgreSQL', 'Redis'],
+      skills: ['CSS', 'HTML', 'Angular', 'Django', 'PostgreSQL', 'Redis'],
       imageUrl: '../../assets/img/preview_videoflix.png',
       githubLink: 'https://github.com/OgulcanErdag/Videoflix_Backend.git',
       liveLink: 'https://videoflix.ogulcan-erdag.com/'
