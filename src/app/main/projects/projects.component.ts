@@ -26,6 +26,11 @@ export class ProjectsComponent {
   // Hands-on collections (repo links)
   handsOnCollections = [
     {
+      title: 'AWS Cloud Architecture — Django Blog',
+      tech: 'EC2 | S3 | VPC | RDS | ALB/ASG | Route53 | CloudFormation',
+      url: 'https://github.com/OgulcanErdag/aws-django-blog-capstone.git',
+    },
+    {
       title: 'AWS Hands-On',
       tech: 'EC2 | IAM | VPC | S3 | ALB/ASG | CloudFormation',
       url: 'https://github.com/OgulcanErdag/AWS_Hands_On',
