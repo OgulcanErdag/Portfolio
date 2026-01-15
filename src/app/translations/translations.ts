@@ -8,7 +8,7 @@ export const translations = {
     START: {
       BUTTON1: 'Check my work',
       BUTTON2: 'Contact me',
-      BANDEROLE1: 'Fullstack & Devops Engineer',
+      BANDEROLE1: 'Fullstack & AWS-Devops Engineer',
       BANDEROLE2: '•',
       BANDEROLE3: 'Based in Stuttgart',
     },
@@ -219,7 +219,7 @@ export const translations = {
     START: {
       BUTTON1: 'Meine Projekte',
       BUTTON2: 'Kontakt',
-      BANDEROLE1: 'Fullstack & DevOps Engineer',
+      BANDEROLE1: 'Fullstack & AWS-DevOps Engineer',
       BANDEROLE2: '•',
       BANDEROLE3: 'Wohnhaft in Stuttgart',
     },
