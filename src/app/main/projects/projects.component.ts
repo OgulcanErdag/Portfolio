@@ -31,9 +31,24 @@ export class ProjectsComponent {
       url: 'https://github.com/OgulcanErdag/aws-django-blog-capstone.git',
     },
     {
-      title: 'AWS Hands-On',
+      title: 'Linux DevOps Automation Suite',
+      tech: 'Bash | Automation | DevOps system tooling',
+      url: 'https://github.com/OgulcanErdag/linux-devops-automation-suite.git',
+    },
+    {
+      title: 'Django-CRM on AWS',
+      tech: 'EC2 | RDS(MySQL) | VPC | IAM | ALB/ASG ',
+      url: 'https://github.com/OgulcanErdag/Django-CRM.git',
+    },
+    {
+      title: 'AWS Hands-Ons',
       tech: 'EC2 | IAM | VPC | S3 | ALB/ASG | CloudFormation',
       url: 'https://github.com/OgulcanErdag/AWS_Hands_On',
+    },
+    {
+      title: 'Linux Hands-Ons',
+      tech: 'Linux fundamentals | bash | users | services | networking',
+      url: 'https://github.com/OgulcanErdag/Linux_Hands_On.git',
     },
     {
       title: 'AWS Mini Projects',
@@ -45,16 +60,8 @@ export class ProjectsComponent {
       tech: 'Full-stack cloud-ready web application',
       url: 'https://github.com/OgulcanErdag/phonebook-web-app.git',
     },
-    {
-      title: 'Linux Hands-On',
-      tech: 'Linux fundamentals | bash | users | services | networking',
-      url: 'https://github.com/OgulcanErdag/Linux_Hands_On.git',
-    },
-    {
-      title: 'Linux DevOps Automation Suite',
-      tech: 'Bash | Automation | DevOps system tooling',
-      url: 'https://github.com/OgulcanErdag/linux-devops-automation-suite.git',
-    },
+
+
   ];
 
 
