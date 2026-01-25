@@ -27,11 +27,7 @@ export class ProjectsComponent {
       tech: 'EC2 | VPC | ALB/ASG | ELB | S3',
       url: 'https://github.com/OgulcanErdag/terraform-iac-aws.git'
     },
-    {
-      title: 'Docker',
-      tech: 'EC2 | VPC | ALB/ASG | ELB | S3',
-      url: 'https://github.com/OgulcanErdag/terraform-iac-aws.git'
-    }
+
   ];
 
   // Hands-on collections (repo links)
