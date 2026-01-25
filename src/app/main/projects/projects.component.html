@@ -120,7 +120,7 @@
       }
 
       <!-- GROUP 3: DevOps Hands-On (Coming Soon) -->
-      <div class="project-details group-header coming-soon" (click)="toggleGroup('devops')">
+      <!-- <div class="project-details group-header coming-soon" (click)="toggleGroup('devops')">
         <div>
           <h3>DevOps Hands-On & Projects (Coming Soon)</h3>
           <img src="../../../assets/img/arrow_outward.svg" alt="" class="group-icon">
@@ -128,7 +128,36 @@
         <p>Kubernetes • Docker • Terraform • Ansible • Jenkins</p>
       </div>
 
+      <div class="project-line"></div> -->
+
       <div class="project-line"></div>
+
+      <div class="project-details group-header" (click)="toggleGroup('devops')">
+        <div>
+          <h3>DevOps Hands-On & Projects</h3>
+          <img src="../../../assets/img/arrow_outward.svg" alt="" class="group-icon"
+            [class.open]="activeGroup === 'devops'">
+        </div>
+        <p>Terraform • Docker • Kubernetes <br> Ansible • Jenkins • Prometheus/Grafana</p>
+      </div>
+
+      @if (activeGroup === 'devops') {
+      <div class="project-line"></div>
+
+      @for (d of devOpsCollections; track d.title) {
+      <a class="project-details collection-details collection-row-link" [href]="d.url" target="_blank" rel="noopener">
+
+        <div>
+          <h3> {{ d.title }} </h3>
+        </div>
+        <div class="collection-right">
+          <p>{{ d.tech }}</p>
+          <img src="../../../assets/img/arrow_outward.svg" alt="">
+        </div>
+      </a>
+      <div class="project-line"></div>
+      }
+      }
 
     </div>
 
