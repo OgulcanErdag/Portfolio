@@ -16,12 +16,23 @@ export class ProjectsComponent {
   // Accordion state
   activeGroup: 'fullstack' | 'handsOn' | 'devops' | null = null;
 
-
-
   toggleGroup(group: 'fullstack' | 'handsOn' | 'devops') {
-    if (group === 'devops') return;
+    // if (group === 'devops') return;
     this.activeGroup = this.activeGroup === group ? null : group;
   }
+
+  devOpsCollections = [
+    {
+      title: 'Terraform-IaC-AWS',
+      tech: 'EC2 | VPC | ALB/ASG | ELB | S3',
+      url: 'https://github.com/OgulcanErdag/terraform-iac-aws.git'
+    },
+    {
+      title: 'Docker',
+      tech: 'EC2 | VPC | ALB/ASG | ELB | S3',
+      url: 'https://github.com/OgulcanErdag/terraform-iac-aws.git'
+    }
+  ];
 
   // Hands-on collections (repo links)
   handsOnCollections = [
@@ -60,8 +71,6 @@ export class ProjectsComponent {
       tech: 'Full-stack cloud-ready web application',
       url: 'https://github.com/OgulcanErdag/phonebook-web-app.git',
     },
-
-
   ];
 
 
