@@ -189,17 +189,30 @@
   }
 }
 
-/* Coming soon */
-// .coming-soon {
-//   opacity: 0.55;
-//   cursor: not-allowed !important;
+.devops-subheader {
+  background-color: rgba(61, 207, 182, 0.04);
 
-//   &:hover {
-//     background-color: rgba(61, 207, 182, 0.08) !important;
-//   }
+  &:hover {
+    background-color: rgba(61, 207, 182, 0.12) !important;
+  }
+}
 
-//   .group-icon {
-//     opacity: 1 !important;
-//     transform: none !important;
-//   }
-// }
+.devops-icon {
+  opacity: 1 !important;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.devops-icon.open {
+  transform: rotate(90deg);
+}
+
+.devops-empty {
+  background-color: transparent;
+  cursor: default;
+
+  > p {
+    font-style: italic;
+    opacity: 0.8;
+  }
+}
