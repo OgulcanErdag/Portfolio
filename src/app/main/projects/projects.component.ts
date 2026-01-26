@@ -2,6 +2,16 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, EventEmitter, Output } from '@angular/core';
 import { TranslationsService } from '../../services/translations.service';
 
+type DevOpsSectionKey =
+  | 'terraform'
+  | 'docker'
+  | 'kubernetes'
+  | 'ansible'
+  | 'jenkins'
+  | 'maven'
+  | 'helm'
+  | 'monitoring';
+
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -17,17 +27,72 @@ export class ProjectsComponent {
   activeGroup: 'fullstack' | 'handsOn' | 'devops' | null = null;
 
   toggleGroup(group: 'fullstack' | 'handsOn' | 'devops') {
-    // if (group === 'devops') return;
     this.activeGroup = this.activeGroup === group ? null : group;
   }
 
-  devOpsCollections = [
-    {
-      title: 'Terraform-IaC-AWS',
-      tech: 'EC2 | VPC | ALB/ASG | ELB | S3',
-      url: 'https://github.com/OgulcanErdag/terraform-iac-aws.git'
-    },
+  // DevOps sub-tab
+  activeDevOpsSection: DevOpsSectionKey | null = null;
 
+  toggleDevOpsSection(sectionKey: DevOpsSectionKey) {
+    this.activeDevOpsSection =
+      this.activeDevOpsSection === sectionKey ? null : sectionKey;
+  }
+
+  devOpsSections = [
+    {
+      key: 'terraform' as DevOpsSectionKey,
+      title: 'Terraform',
+      subtitle: 'IaC • AWS',
+      repos: [
+        {
+          title: 'Terraform-IaC-AWS',
+          tech: 'EC2 | VPC | ALB/ASG | ELB | S3',
+          url: 'https://github.com/OgulcanErdag/terraform-iac-aws.git'
+        }
+      ]
+    },
+    {
+      key: 'docker' as DevOpsSectionKey,
+      title: 'Docker',
+      subtitle: 'Containers • Images • Docker Compose',
+      repos: []
+    },
+    {
+      key: 'kubernetes' as DevOpsSectionKey,
+      title: 'Kubernetes',
+      subtitle: 'K8s • Pods • Services • Deployments',
+      repos: []
+    },
+    {
+      key: 'ansible' as DevOpsSectionKey,
+      title: 'Ansible',
+      subtitle: 'Configuration Management • Playbooks',
+      repos: []
+    },
+    {
+      key: 'jenkins' as DevOpsSectionKey,
+      title: 'Jenkins',
+      subtitle: 'CI/CD Pipelines • Automation',
+      repos: []
+    },
+    {
+      key: 'maven' as DevOpsSectionKey,
+      title: 'Maven',
+      subtitle: 'Build • Dependency Management (Java)',
+      repos: []
+    },
+    {
+      key: 'helm' as DevOpsSectionKey,
+      title: 'Helm',
+      subtitle: 'K8s Packaging • Charts',
+      repos: []
+    },
+    {
+      key: 'monitoring' as DevOpsSectionKey,
+      title: 'Prometheus & Grafana',
+      subtitle: 'Monitoring • Dashboards • Alerts',
+      repos: []
+    }
   ];
 
   // Hands-on collections (repo links)
@@ -68,7 +133,6 @@ export class ProjectsComponent {
       url: 'https://github.com/OgulcanErdag/phonebook-web-app.git',
     },
   ];
-
 
   onProjectClick(projectIndex: number) {
     this.projectClicked.emit(projectIndex);
