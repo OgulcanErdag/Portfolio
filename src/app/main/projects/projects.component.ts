@@ -48,7 +48,12 @@ export class ProjectsComponent {
           title: 'Terraform-IaC-AWS',
           tech: 'EC2 | VPC | ALB/ASG | ELB | S3',
           url: 'https://github.com/OgulcanErdag/terraform-iac-aws.git'
-        }
+        },
+        {
+          title: 'Terraform_Hands_On',
+          tech: 'EC2 | VPC | IAM | ALB/ASG | ELB | S3',
+          url: 'https://github.com/OgulcanErdag/Terraform_Hands_On.git'
+        },
       ]
     },
     {
