@@ -54,6 +54,11 @@ export class ProjectsComponent {
           tech: 'EC2 | VPC | IAM | ALB/ASG | ELB | S3',
           url: 'https://github.com/OgulcanErdag/Terraform_Hands_On.git'
         },
+        {
+          title: 'Terraform-aws-docker-instance',
+          tech: 'Terraform Registry(Community)',
+          url: 'https://github.com/OgulcanErdag/terraform-aws-docker-instance.git'
+        },
       ]
     },
     {
