@@ -59,6 +59,11 @@ export class ProjectsComponent {
           tech: 'Terraform Registry(Community)',
           url: 'https://github.com/OgulcanErdag/terraform-aws-docker-instance.git'
         },
+        {
+          title: 'Phonebook-V2 ',
+          tech: 'EC2 | RDS | ASG/ALB/TG | VPC',
+          url: 'https://github.com/OgulcanErdag/phonebook-v2.git'
+        },
       ]
     },
     {
