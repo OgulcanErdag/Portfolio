@@ -70,13 +70,25 @@ export class ProjectsComponent {
       key: 'docker' as DevOpsSectionKey,
       title: 'Docker',
       subtitle: 'Containers • Images • Docker Compose',
-      repos: []
+      repos: [
+        {
+          title: 'Docker_Hands_on ',
+          tech: 'Images | Compose | Volumes | Networking',
+          url: 'https://github.com/OgulcanErdag/Docker_Hands_On.git'
+        },
+      ]
     },
     {
       key: 'kubernetes' as DevOpsSectionKey,
       title: 'Kubernetes',
       subtitle: 'K8s • Pods • Services • Deployments',
-      repos: []
+      repos: [
+        {
+          title: 'Kubernetes_Hands_on ',
+          tech: 'Core | Networking | Storage | EKS',
+          url: 'https://github.com/OgulcanErdag/Kubernetes_Hands_On.git'
+        },
+      ]
     },
     {
       key: 'ansible' as DevOpsSectionKey,
