@@ -76,6 +76,11 @@ export class ProjectsComponent {
           tech: 'Images | Compose | Volumes | Networking',
           url: 'https://github.com/OgulcanErdag/Docker_Hands_On.git'
         },
+        {
+          title: 'bookstore-api-docker-terraform',
+          tech: 'Terraform | AWS | Docker | Compose | MySQL',
+          url: 'https://github.com/OgulcanErdag/bookstore-api-docker-terraform.git'
+        },
       ]
     },
     {
