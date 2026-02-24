@@ -103,20 +103,54 @@
 
       <div class="project-line"></div>
 
-      @for (c of handsOnCollections; track c.title) {
-      <a class="project-details collection-details collection-row-link" [href]="c.url" target="_blank" rel="noopener">
+      @for (section of cloudSections; track section.key) {
+
+      <!-- Cloud Sub-Tab (AWS / Linux) -->
+      <div class="project-details devops-subheader" (click)="toggleCloudSection(section.key)">
         <div>
-          <h3>{{ c.title }}</h3>
+          <h3>{{ section.title }}</h3>
+          <img src="../../../assets/img/arrow_outward.svg" alt="" class="devops-icon"
+            [class.open]="activeCloudSection === section.key">
+        </div>
+        <p>{{ section.subtitle }}</p>
+      </div>
+
+      <!-- Content of selected Cloud topic -->
+      @if (activeCloudSection === section.key) {
+
+      <div class="project-line"></div>
+
+      @if (section.repos.length > 0) {
+
+      @for (repo of section.repos; track repo.title) {
+      <a class="project-details collection-details collection-row-link" [href]="repo.url" target="_blank"
+        rel="noopener">
+        <div>
+          <h3>{{ repo.title }}</h3>
         </div>
 
         <div class="collection-right">
-          <p>{{ c.tech }}</p>
+          <p>{{ repo.tech }}</p>
           <img src="../../../assets/img/arrow_outward.svg" alt="">
         </div>
       </a>
 
       <div class="project-line"></div>
       }
+
+      } @else {
+
+      <div class="project-details devops-empty">
+        <p>Coming soon – hands-on labs & projects will be added here.</p>
+      </div>
+      <div class="project-line"></div>
+
+      }
+
+      }
+
+      }
+
       }
 
       <!-- GROUP 3: DevOps Hands-On & Projects -->

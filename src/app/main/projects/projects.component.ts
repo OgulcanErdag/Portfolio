@@ -12,6 +12,7 @@ type DevOpsSectionKey =
   | 'helm'
   | 'monitoring';
 
+type CloudSectionKey = 'aws' | 'linux';
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -50,7 +51,7 @@ export class ProjectsComponent {
           url: 'https://github.com/OgulcanErdag/terraform-iac-aws.git'
         },
         {
-          title: 'Terraform_Hands_On',
+          title: 'Hands-On',
           tech: 'EC2 | VPC | IAM | ALB/ASG | ELB | S3',
           url: 'https://github.com/OgulcanErdag/Terraform_Hands_On.git'
         },
@@ -72,14 +73,14 @@ export class ProjectsComponent {
       subtitle: 'Containers • Images • Docker Compose',
       repos: [
         {
-          title: 'Docker_Hands_on ',
+          title: 'Hands-on ',
           tech: 'Images | Compose | Volumes | Networking',
           url: 'https://github.com/OgulcanErdag/Docker_Hands_On.git'
         },
         {
-          title: 'bookstore-api-docker-terraform',
+          title: 'dockerization-bookstore-app',
           tech: 'Terraform | AWS | Docker | Compose | MySQL',
-          url: 'https://github.com/OgulcanErdag/bookstore-api-docker-terraform.git'
+          url: 'https://github.com/OgulcanErdag/dockerization-bookstore-app.git'
         },
       ]
     },
@@ -89,7 +90,7 @@ export class ProjectsComponent {
       subtitle: 'K8s • Pods • Services • Deployments',
       repos: [
         {
-          title: 'Kubernetes_Hands_on ',
+          title: 'Hands-on ',
           tech: 'Core | Networking | Storage | EKS',
           url: 'https://github.com/OgulcanErdag/Kubernetes_Hands_On.git'
         },
@@ -127,43 +128,60 @@ export class ProjectsComponent {
     }
   ];
 
-  // Hands-on collections (repo links)
-  handsOnCollections = [
+  // Cloud (AWS + Linux) same structure like DevOps
+  activeCloudSection: CloudSectionKey | null = null;
+
+  toggleCloudSection(sectionKey: CloudSectionKey) {
+    this.activeCloudSection =
+      this.activeCloudSection === sectionKey ? null : sectionKey;
+  }
+
+
+  cloudSections = [
     {
-      title: 'AWS Cloud Architecture — Django Blog',
-      tech: 'EC2 | S3 | VPC | RDS | ALB/ASG | Route53 | CloudFormation',
-      url: 'https://github.com/OgulcanErdag/aws-django-blog-capstone.git',
+      key: 'aws' as CloudSectionKey,
+      title: 'AWS',
+      subtitle: 'Cloud • Architecture • Services',
+      repos: [
+        {
+          title: 'Hands-On',
+          tech: 'EC2 | IAM | VPC | S3 | ALB/ASG | CloudFormation',
+          url: 'https://github.com/OgulcanErdag/AWS_Hands_On'
+        },
+        {
+          title: 'AWS Mini Projects',
+          tech: 'Cloud mini apps & demos (various AWS services)',
+          url: 'https://github.com/OgulcanErdag/aws-projects.git'
+        },
+        {
+          title: 'AWS Cloud Architecture — Django Blog',
+          tech: 'EC2 | S3 | VPC | RDS | ALB/ASG | Route53 | CloudFormation',
+          url: 'https://github.com/OgulcanErdag/aws-django-blog-capstone.git'
+        },
+        {
+          title: 'Django-CRM on AWS',
+          tech: 'EC2 | RDS(MySQL) | VPC | IAM | ALB/ASG',
+          url: 'https://github.com/OgulcanErdag/Django-CRM.git'
+        }
+      ]
     },
     {
-      title: 'Linux DevOps Automation Suite',
-      tech: 'Bash | Automation | DevOps system tooling',
-      url: 'https://github.com/OgulcanErdag/linux-devops-automation-suite.git',
-    },
-    {
-      title: 'Django-CRM on AWS',
-      tech: 'EC2 | RDS(MySQL) | VPC | IAM | ALB/ASG ',
-      url: 'https://github.com/OgulcanErdag/Django-CRM.git',
-    },
-    {
-      title: 'AWS Hands-Ons',
-      tech: 'EC2 | IAM | VPC | S3 | ALB/ASG | CloudFormation',
-      url: 'https://github.com/OgulcanErdag/AWS_Hands_On',
-    },
-    {
-      title: 'Linux Hands-Ons',
-      tech: 'Linux fundamentals | bash | users | services | networking',
-      url: 'https://github.com/OgulcanErdag/Linux_Hands_On.git',
-    },
-    {
-      title: 'AWS Mini Projects',
-      tech: 'Cloud mini apps & demos (various AWS services)',
-      url: 'https://github.com/OgulcanErdag/aws-projects.git',
-    },
-    {
-      title: 'Phonebook Web App',
-      tech: 'Full-stack cloud-ready web application',
-      url: 'https://github.com/OgulcanErdag/phonebook-web-app.git',
-    },
+      key: 'linux' as CloudSectionKey,
+      title: 'Linux',
+      subtitle: 'Fundamentals • Scripting • Ops',
+      repos: [
+        {
+          title: 'Hands-On',
+          tech: 'Fundamentals | bash | users | services | networking',
+          url: 'https://github.com/OgulcanErdag/Linux_Hands_On.git'
+        },
+        {
+          title: 'Linux DevOps Automation Suite',
+          tech: 'Bash | Automation | DevOps system tooling',
+          url: 'https://github.com/OgulcanErdag/linux-devops-automation-suite.git'
+        }
+      ]
+    }
   ];
 
   onProjectClick(projectIndex: number) {
