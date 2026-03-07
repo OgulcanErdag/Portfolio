@@ -94,6 +94,11 @@ export class ProjectsComponent {
           tech: 'Core | Networking | Storage | EKS',
           url: 'https://github.com/OgulcanErdag/Kubernetes_Hands_On.git'
         },
+        {
+          title: 'K8s-Microservice-Phonebook  ',
+          tech: 'PV/PVC | Ingress | Service | Deploy',
+          url: 'https://github.com/OgulcanErdag/K8s-Microservice-Phonebook.git'
+        },
       ]
     },
     {
