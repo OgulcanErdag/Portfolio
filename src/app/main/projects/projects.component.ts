@@ -105,18 +105,24 @@ export class ProjectsComponent {
       key: 'ansible' as DevOpsSectionKey,
       title: 'Ansible',
       subtitle: 'Configuration Management • Playbooks',
+      repos: [
+        {
+          title: 'Hands-on  ',
+          tech: 'Playbooks | Roles | Vault',
+          url: 'https://github.com/OgulcanErdag/Ansible_Hands_on.git'
+        },
+      ]
+    },
+    {
+      key: 'maven' as DevOpsSectionKey,
+      title: 'Maven',
+      subtitle: 'Build • Dependency Management (Java)',
       repos: []
     },
     {
       key: 'jenkins' as DevOpsSectionKey,
       title: 'Jenkins',
       subtitle: 'CI/CD Pipelines • Automation',
-      repos: []
-    },
-    {
-      key: 'maven' as DevOpsSectionKey,
-      title: 'Maven',
-      subtitle: 'Build • Dependency Management (Java)',
       repos: []
     },
     {
