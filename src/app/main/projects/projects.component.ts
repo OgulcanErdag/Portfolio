@@ -126,12 +126,6 @@ export class ProjectsComponent {
       repos: []
     },
     {
-      key: 'helm' as DevOpsSectionKey,
-      title: 'Helm',
-      subtitle: 'K8s Packaging • Charts',
-      repos: []
-    },
-    {
       key: 'monitoring' as DevOpsSectionKey,
       title: 'Prometheus & Grafana',
       subtitle: 'Monitoring • Dashboards • Alerts',
