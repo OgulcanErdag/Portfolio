@@ -117,7 +117,13 @@ export class ProjectsComponent {
       key: 'maven' as DevOpsSectionKey,
       title: 'Maven',
       subtitle: 'Build • Dependency Management (Java)',
-      repos: []
+      repos: [
+        {
+          title: 'Hands-on',
+          tech: 'Build | Dependencies |Plugins',
+          url: 'https://github.com/OgulcanErdag/Maven_Hands_on.git'
+        }
+      ],
     },
     {
       key: 'jenkins' as DevOpsSectionKey,
