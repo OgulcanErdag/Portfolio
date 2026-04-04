@@ -99,6 +99,11 @@ export class ProjectsComponent {
           tech: 'PV/PVC | Ingress | Service | Deploy',
           url: 'https://github.com/OgulcanErdag/K8s-Microservice-Phonebook.git'
         },
+        {
+          title: 'Phonebook-k8s-helm-chart  ',
+          tech: 'Helm | Values | Templates',
+          url: 'https://github.com/OgulcanErdag/phonebook-k8s-helm-chart.git'
+        },
       ]
     },
     {
