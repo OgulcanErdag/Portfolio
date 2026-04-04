@@ -78,7 +78,7 @@ export const translations = {
       HEADLINE2: "Let's work",
       H2BR: "together",
       HEADLINE3: "Got a problem to solve?",
-      TEXT1: "Contact me through this form; I am interested in hearing from you, knowing your ideas, and contributing to your projects with my work.",
+      TEXT1: "Contact me through this form. I am interested in hearing from you, knowing your ideas, and contributing to your projects with my work.",
       TEXT2: "Need a Fullstack & AWS-DevOps Engineer?",
       SPAN1: "Let's talk!",
       FIELD1: "Your name:",
