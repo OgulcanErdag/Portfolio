@@ -125,7 +125,7 @@ export class ProjectsComponent {
       repos: [
         {
           title: 'Hands-on',
-          tech: 'Build | Dependencies |Plugins',
+          tech: 'Build | Dependencies | Plugins',
           url: 'https://github.com/OgulcanErdag/Maven_Hands_on.git'
         }
       ],
@@ -134,13 +134,25 @@ export class ProjectsComponent {
       key: 'jenkins' as DevOpsSectionKey,
       title: 'Jenkins',
       subtitle: 'CI/CD Pipelines • Automation',
-      repos: []
+      repos: [
+        {
+          title: 'Hands-on',
+          tech: 'Freestyle | Pipeline | K8s Deploy',
+          url: 'https://github.com/OgulcanErdag/Jenkins_Hands_on.git'
+        }
+      ]
     },
     {
       key: 'monitoring' as DevOpsSectionKey,
       title: 'Prometheus & Grafana',
       subtitle: 'Monitoring • Dashboards • Alerts',
-      repos: []
+      repos: [
+        {
+          title: 'Hands-on',
+          tech: 'EC2 Setup | K8s Cluster Monitoring',
+          url: 'https://github.com/OgulcanErdag/Prometheus-Grafana_Hands_on.git'
+        }
+      ]
     }
   ];
 
