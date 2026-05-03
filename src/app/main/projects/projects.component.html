@@ -172,7 +172,8 @@
       @for (section of devOpsSections; track section.key) {
 
       <!-- DevOps Sub-Tab (Terraform / Docker / K8s / ...) -->
-      <div class="project-details devops-subheader" (click)="toggleDevOpsSection(section.key)">
+      <div class="project-details devops-subheader" [class.devops-featured]="section.key === 'end-to-end-devops'"
+        (click)="toggleDevOpsSection(section.key)">
         <div>
           <h3>{{ section.title }}</h3>
           <img src="../../../assets/img/arrow_outward.svg" alt="" class="devops-icon"
@@ -189,7 +190,8 @@
       @if (section.repos.length > 0) {
 
       @for (repo of section.repos; track repo.title) {
-      <a class="project-details collection-details collection-row-link" [href]="repo.url" target="_blank"
+      <a class="project-details collection-details collection-row-link"
+        [class.devops-featured-repo]="section.key === 'end-to-end-devops'" [href]="repo.url" target="_blank"
         rel="noopener">
         <div>
           <h3>{{ repo.title }}</h3>
