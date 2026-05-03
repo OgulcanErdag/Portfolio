@@ -91,8 +91,10 @@ export const translations = {
       SPAN2: "privacy policy",
       TEXT4: "and agree to the processing of my data as outlined.",
       BUTTON: "Say hello :-)",
+      ERROR_NAME_REQUIRED: "Oops! It seems your name is missing.",
       ERROR_EMAIL_REQUIRED: "Email is required.",
       ERROR_INVALID_EMAIL: "Please enter a valid email address.",
+      ERROR_MESSAGE_REQUIRED: "What do you need to develop?",
       ERROR_PRIVACY_REQUIRED: "Please accept the privacy policy.",
       SUCCESS_MESSAGE: "Thanks for your message! I will respond as soon as possible!"
     },
@@ -310,8 +312,10 @@ export const translations = {
       SPAN2: 'Datenschutzbestimmungen',
       TEXT4: 'gelesen und stimme den Inhalten zu.',
       BUTTON: 'Sag hallo :-)',
+      ERROR_NAME_REQUIRED: 'Ups! Dein Name fehlt noch.',
       ERROR_EMAIL_REQUIRED: 'E-Mail ist erforderlich.',
       ERROR_INVALID_EMAIL: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+      ERROR_MESSAGE_REQUIRED: 'Was kann ich für dich entwickeln?',
       ERROR_PRIVACY_REQUIRED: "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
       SUCCESS_MESSAGE: "Danke für Ihre Nachricht! Ich werde so schnell wie möglich antworten!"
     },
