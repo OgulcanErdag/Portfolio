@@ -14,6 +14,20 @@ type DevOpsSectionKey =
   | 'monitoring';
 
 type CloudSectionKey = 'aws' | 'linux';
+
+interface Repo {
+  title: string;
+  tech: string;
+  url: string;
+}
+
+interface Section<T extends string> {
+  key: T;
+  title: string;
+  subtitle: string;
+  repos: Repo[];
+}
+
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -40,9 +54,9 @@ export class ProjectsComponent {
       this.activeDevOpsSection === sectionKey ? null : sectionKey;
   }
 
-  devOpsSections = [
+  devOpsSections: Section<DevOpsSectionKey>[] = [
     {
-      key: 'end-to-end-devops' as DevOpsSectionKey,
+      key: 'end-to-end-devops',
       title: 'End-to-End DevOps',
       subtitle: 'Microservices • Kubernetes • Jenkins • AWS',
       repos: [
@@ -53,9 +67,8 @@ export class ProjectsComponent {
         }
       ]
     },
-
     {
-      key: 'terraform' as DevOpsSectionKey,
+      key: 'terraform',
       title: 'Terraform',
       subtitle: 'IaC • AWS',
       repos: [
@@ -71,98 +84,98 @@ export class ProjectsComponent {
         },
         {
           title: 'Terraform-aws-docker-instance',
-          tech: 'Terraform Registry(Community)',
+          tech: 'Terraform Registry (Community)',
           url: 'https://github.com/OgulcanErdag/terraform-aws-docker-instance.git'
         },
         {
-          title: 'Phonebook-V2 ',
+          title: 'Phonebook-V2',
           tech: 'EC2 | RDS | ASG/ALB/TG | VPC',
           url: 'https://github.com/OgulcanErdag/phonebook-v2.git'
         },
       ]
     },
     {
-      key: 'docker' as DevOpsSectionKey,
+      key: 'docker',
       title: 'Docker',
       subtitle: 'Containers • Images • Docker Compose',
       repos: [
         {
-          title: 'Hands-on ',
+          title: 'Hands-On',
           tech: 'Images | Compose | Volumes | Networking',
           url: 'https://github.com/OgulcanErdag/Docker_Hands_On.git'
         },
         {
-          title: 'dockerization-bookstore-app',
+          title: 'Dockerization Bookstore App',
           tech: 'Terraform | AWS | Docker | Compose | MySQL',
           url: 'https://github.com/OgulcanErdag/dockerization-bookstore-app.git'
         },
       ]
     },
     {
-      key: 'kubernetes' as DevOpsSectionKey,
+      key: 'kubernetes',
       title: 'Kubernetes',
       subtitle: 'K8s • Pods • Services • Deployments',
       repos: [
         {
-          title: 'Hands-on ',
+          title: 'Hands-On',
           tech: 'Core | Networking | Storage | EKS',
           url: 'https://github.com/OgulcanErdag/Kubernetes_Hands_On.git'
         },
         {
-          title: 'K8s-Microservice-Phonebook  ',
+          title: 'K8s Microservice Phonebook',
           tech: 'PV/PVC | Ingress | Service | Deploy',
           url: 'https://github.com/OgulcanErdag/K8s-Microservice-Phonebook.git'
         },
         {
-          title: 'Phonebook-k8s-helm-chart  ',
+          title: 'Phonebook K8s Helm Chart',
           tech: 'Helm | Values | Templates',
           url: 'https://github.com/OgulcanErdag/phonebook-k8s-helm-chart.git'
         },
       ]
     },
     {
-      key: 'ansible' as DevOpsSectionKey,
+      key: 'ansible',
       title: 'Ansible',
       subtitle: 'Configuration Management • Playbooks',
       repos: [
         {
-          title: 'Hands-on  ',
+          title: 'Hands-On',
           tech: 'Playbooks | Roles | Vault',
           url: 'https://github.com/OgulcanErdag/Ansible_Hands_on.git'
         },
       ]
     },
     {
-      key: 'maven' as DevOpsSectionKey,
+      key: 'maven',
       title: 'Maven',
       subtitle: 'Build • Dependency Management (Java)',
       repos: [
         {
-          title: 'Hands-on',
+          title: 'Hands-On',
           tech: 'Build | Dependencies | Plugins',
           url: 'https://github.com/OgulcanErdag/Maven_Hands_on.git'
         }
-      ],
+      ]
     },
     {
-      key: 'jenkins' as DevOpsSectionKey,
+      key: 'jenkins',
       title: 'Jenkins',
       subtitle: 'CI/CD Pipelines • Automation',
       repos: [
         {
-          title: 'Hands-on',
+          title: 'Hands-On',
           tech: 'Freestyle | Pipeline | K8s Deploy',
           url: 'https://github.com/OgulcanErdag/Jenkins_Hands_on.git'
         }
       ]
     },
     {
-      key: 'monitoring' as DevOpsSectionKey,
+      key: 'monitoring',
       title: 'Prometheus & Grafana',
       subtitle: 'Monitoring • Dashboards • Alerts',
       repos: [
         {
-          title: 'Hands-on',
+          title: 'Hands-On',
           tech: 'EC2 Setup | K8s Cluster Monitoring',
           url: 'https://github.com/OgulcanErdag/Prometheus-Grafana_Hands_on.git'
         }
@@ -170,7 +183,7 @@ export class ProjectsComponent {
     }
   ];
 
-  // Cloud (AWS + Linux) same structure like DevOps
+  // Cloud (AWS + Linux)
   activeCloudSection: CloudSectionKey | null = null;
 
   toggleCloudSection(sectionKey: CloudSectionKey) {
@@ -178,10 +191,9 @@ export class ProjectsComponent {
       this.activeCloudSection === sectionKey ? null : sectionKey;
   }
 
-
-  cloudSections = [
+  cloudSections: Section<CloudSectionKey>[] = [
     {
-      key: 'aws' as CloudSectionKey,
+      key: 'aws',
       title: 'AWS',
       subtitle: 'Cloud • Architecture • Services',
       repos: [
@@ -202,24 +214,24 @@ export class ProjectsComponent {
         },
         {
           title: 'Django-CRM on AWS',
-          tech: 'EC2 | RDS(MySQL) | VPC | IAM | ALB/ASG',
+          tech: 'EC2 | RDS (MySQL) | VPC | IAM | ALB/ASG',
           url: 'https://github.com/OgulcanErdag/Django-CRM.git'
         }
       ]
     },
     {
-      key: 'linux' as CloudSectionKey,
+      key: 'linux',
       title: 'Linux',
       subtitle: 'Fundamentals • Scripting • Ops',
       repos: [
         {
           title: 'Hands-On',
-          tech: 'Fundamentals | bash | users | services | networking',
+          tech: 'Fundamentals | Bash | Users | Services | Networking',
           url: 'https://github.com/OgulcanErdag/Linux_Hands_On.git'
         },
         {
           title: 'Linux DevOps Automation Suite',
-          tech: 'Bash | Automation | DevOps system tooling',
+          tech: 'Bash | Automation | DevOps System Tooling',
           url: 'https://github.com/OgulcanErdag/linux-devops-automation-suite.git'
         }
       ]
@@ -246,12 +258,6 @@ export class ProjectsComponent {
   }
 
   translationData = inject(TranslationsService);
-  activeLang: 'en' | 'de' = 'en';
-
-  setActiveLang(lang: 'en' | 'de') {
-    this.activeLang = lang;
-    this.translationData.setLanguage(lang);
-  }
 
   getTranslation(key: string): string {
     return this.translationData.getTranslation(key);
