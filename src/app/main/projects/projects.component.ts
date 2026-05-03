@@ -3,6 +3,7 @@ import { Component, inject, EventEmitter, Output } from '@angular/core';
 import { TranslationsService } from '../../services/translations.service';
 
 type DevOpsSectionKey =
+  | 'end-to-end-devops'
   | 'terraform'
   | 'docker'
   | 'kubernetes'
@@ -40,6 +41,19 @@ export class ProjectsComponent {
   }
 
   devOpsSections = [
+    {
+      key: 'end-to-end-devops' as DevOpsSectionKey,
+      title: 'End-to-End DevOps',
+      subtitle: 'Microservices • Kubernetes • Jenkins • AWS',
+      repos: [
+        {
+          title: 'DevOps Pipeline',
+          tech: 'K8s | Terraform | Jenkins | Docker | Ansible | AWS',
+          url: 'https://github.com/OgulcanErdag/petclinic-microservices-with-db'
+        }
+      ]
+    },
+
     {
       key: 'terraform' as DevOpsSectionKey,
       title: 'Terraform',
