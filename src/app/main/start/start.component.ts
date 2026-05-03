@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TranslationsService } from '../../services/translations.service';
 
+const HEADER_HEIGHT_OFFSET = -140;
+
 @Component({
   selector: 'app-start',
   standalone: true,
@@ -9,16 +11,9 @@ import { TranslationsService } from '../../services/translations.service';
   templateUrl: './start.component.html',
   styleUrl: './start.component.scss'
 })
-
 export class StartComponent {
 
   translationData = inject(TranslationsService);
-  activeLang: 'en' | 'de' = 'en';
-
-  setActiveLang(lang: 'en' | 'de') {
-    this.activeLang = lang;
-    this.translationData.setLanguage(lang);
-  }
 
   getTranslation(key: string): string {
     return this.translationData.getTranslation(key);
@@ -28,9 +23,7 @@ export class StartComponent {
     const element = document.getElementById(sectionId);
     if (!element) return;
 
-    const yOffset = -140; // header yüksekliği kadar negatif
-    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-
+    const y = element.getBoundingClientRect().top + window.scrollY + HEADER_HEIGHT_OFFSET;
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
 }
