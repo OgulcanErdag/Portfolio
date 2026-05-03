@@ -65,6 +65,12 @@ export interface TranslationStructure {
     SPAN2: string;
     TEXT4: string;
     BUTTON: string;
+    ERROR_NAME_REQUIRED: string;
+    ERROR_EMAIL_REQUIRED: string;
+    ERROR_INVALID_EMAIL: string;
+    ERROR_MESSAGE_REQUIRED: string;
+    ERROR_PRIVACY_REQUIRED: string;
+    SUCCESS_MESSAGE: string;
   },
   PROJECTS: {
     HEADLINE: string,
