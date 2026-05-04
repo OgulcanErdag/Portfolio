@@ -18,7 +18,6 @@ export class SkillsComponent {
     { 'img': '../../../assets/img/skills/js.png', 'text': 'JavaScript' },
     { 'img': '../../../assets/img/skills/typescript.png', 'text': 'TypeScript' },
     { 'img': '../../../assets/img/skills/angular.png', 'text': 'Angular' },
-    { 'img': '../../../assets/img/skills/firebase.png', 'text': 'Firebase' },
     { 'img': '../../../assets/img/skills/gear.png', 'text': 'REST-API' },
     { 'img': '../../../assets/img/skills/postgre-sql.png', 'text': 'PostgreSQL' },
     { 'img': '../../../assets/img/skills/python.png', 'text': 'Python' },
@@ -31,8 +30,9 @@ export class SkillsComponent {
     { 'img': '../../../assets/img/skills/jenkins.png', 'text': 'Jenkins' },
     { 'img': '../../../assets/img/skills/ansible.png', 'text': 'Ansible' },
     { 'img': '../../../assets/img/skills/aws.png', 'text': 'AWS', key: 'aws' },
-    { 'img': '../../../assets/img/skills/azure.png', 'text': 'Azure' },
-    { 'img': '../../../assets/img/skills/skill11.png', 'text': 'Growth mindset' },
+    { 'img': '../../../assets/img/skills/grafana.svg', 'text': 'Grafana' },
+    { 'img': '../../../assets/img/skills/prometheus.svg', 'text': 'Prometheus' },
+    { 'img': '../../../assets/img/skills/rancher.png', 'text': 'Rancher' },
 
   ]
 
@@ -48,20 +48,20 @@ export class SkillsComponent {
     return this.translationData.getTranslation(key);
   }
 
-  isBubbleVisible = false;
+  // isBubbleVisible = false;
 
-  @ViewChild('bubbleRef') bubbleRef!: ElementRef;
-  openBubble(event: MouseEvent) {
-    this.isBubbleVisible = true;
-    event.stopPropagation();
-  }
+  // @ViewChild('bubbleRef') bubbleRef!: ElementRef;
+  // openBubble(event: MouseEvent) {
+  //   this.isBubbleVisible = true;
+  //   event.stopPropagation();
+  // }
 
-  @HostListener('document:click', ['$event'])
-  onDocumentClick(event: MouseEvent) {
-    if (this.bubbleRef && !this.bubbleRef.nativeElement.contains(event.target)) {
-      this.isBubbleVisible = false;
-    }
-  }
+  // @HostListener('document:click', ['$event'])
+  // onDocumentClick(event: MouseEvent) {
+  //   if (this.bubbleRef && !this.bubbleRef.nativeElement.contains(event.target)) {
+  //     this.isBubbleVisible = false;
+  //   }
+  // }
 
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
