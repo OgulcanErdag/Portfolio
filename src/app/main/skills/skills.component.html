@@ -17,7 +17,7 @@
 
       <div class="skills-icons">
         @for (skill of skills; track skill.text; let index = $index) {
-        @if (index === skills.length - 1) {
+        <!-- @if (index === skills.length - 1) {
         <div class="bubble-container">
           <div class="speech-bubble" #bubbleRef [style.display]="isBubbleVisible ? 'block' : 'none'">
             <p>{{ getTranslation('SKILLS.BUBBLE') }}</p>
@@ -38,13 +38,13 @@
             <p [ngStyle]="{'color': isBubbleVisible ? 'rgba(61,207,182,1)' : 'white'}">{{ skill.text }}</p>
           </div>
         </div>
-        } @else {
+        } @else { -->
         <div class="skill-icon">
           <img [src]="skill.img" [alt]="skill.text" [class.aws]="skill.key === 'aws'">
           <p>{{ skill.text }}</p>
         </div>
         }
-        }
+        <!-- } -->
       </div>
     </div>
   </div>
