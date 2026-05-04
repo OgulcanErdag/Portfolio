@@ -40,7 +40,8 @@
         </div>
         } @else { -->
         <div class="skill-icon">
-          <img [src]="skill.img" [alt]="skill.text" [class.aws]="skill.key === 'aws'">
+          <img [src]="skill.img" [alt]="skill.text" [class.aws]="skill.key === 'aws'"
+            [class.rancher]="skill.key === 'rancher'">
           <p>{{ skill.text }}</p>
         </div>
         }
