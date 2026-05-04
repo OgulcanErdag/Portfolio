@@ -62,7 +62,7 @@ export class ProjectsComponent {
       repos: [
         {
           title: 'DevOps Pipeline',
-          tech: 'K8s | Terraform | Jenkins | Docker | Ansible | AWS',
+          tech: 'K8s | Terraform | Jenkins | Docker | AWS',
           url: 'https://github.com/OgulcanErdag/petclinic-microservices-with-db'
         }
       ]
