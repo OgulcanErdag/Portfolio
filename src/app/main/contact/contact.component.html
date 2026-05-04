@@ -93,15 +93,20 @@
                     {{ getTranslation('CONTACTS.ERROR_PRIVACY_REQUIRED') }}
                 </p>
 
-                <p *ngIf="successMail" class="success">
+                <!-- <p *ngIf="successMail" class="success">
                     {{ getTranslation('CONTACTS.SUCCESS_MESSAGE') }}
-                </p>
+                </p> -->
 
                 <div class="submit-area">
                     <button type="submit"
                         [disabled]="!contactData.name || !contactData.email || !contactData.message || !isChecked">
                         {{ getTranslation('CONTACTS.BUTTON') }}
                     </button>
+                </div>
+                <div class="success-overlay" *ngIf="successMail">
+                    <div class="success-popup">
+                        <p>{{ getTranslation('CONTACTS.SUCCESS_MESSAGE') }}</p>
+                    </div>
                 </div>
             </form>
         </div>
