@@ -32,7 +32,7 @@ export class SkillsComponent {
     { 'img': '../../../assets/img/skills/aws.png', 'text': 'AWS', key: 'aws' },
     { 'img': '../../../assets/img/skills/grafana.svg', 'text': 'Grafana' },
     { 'img': '../../../assets/img/skills/prometheus.svg', 'text': 'Prometheus' },
-    { 'img': '../../../assets/img/skills/rancher.png', 'text': 'Rancher' },
+    { 'img': '../../../assets/img/skills/rancher.png', 'text': 'Rancher', key: 'rancher' },
 
   ]
 
