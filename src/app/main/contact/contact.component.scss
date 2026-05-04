@@ -174,13 +174,17 @@ textarea {
   > button {
     color: rgba(255, 255, 255, 0.8);
     border-color: rgba(255, 255, 255, 0.8);
-    padding: 10px 20px; // Füge etwas Padding hinzu
+    padding: 10px 20px;
+    transition: all 0.2s ease;
 
     &:hover {
       color: rgba(255, 255, 255, 0.8);
-      border-color: rgba(255, 255, 255, 0.8);
+      border-color: $standard-green;
       background-color: rgba(61, 207, 182, 0.15);
+      box-shadow: 0 0 12px rgba(61, 207, 182, 0.4);
+      transform: scale(1.03);
       cursor: pointer;
+      transition: all 0.2s ease;
     }
 
     &:disabled {
