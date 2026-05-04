@@ -20,12 +20,16 @@ import { RouterLink } from '@angular/router';
 })
 export class ContactComponent implements OnInit {
   http = inject(HttpClient);
-  translationData = inject(TranslationsService);
 
   isChecked = false;
   showCheckboxError = false;
   successMail = false;
   mailTest = false;
+  invalid: boolean = false;
+  touched: boolean = false;
+
+  translationData = inject(TranslationsService);
+  activeLang: 'en' | 'de' = 'en';
 
   placeholders = {
     name: '',
@@ -40,7 +44,9 @@ export class ContactComponent implements OnInit {
   };
 
   ngOnInit() {
-    this.resetPlaceholders();
+    this.placeholders.name = this.getTranslation('CONTACTS.PLACEHOLDER1');
+    this.placeholders.email = this.getTranslation('CONTACTS.PLACEHOLDER2');
+    this.placeholders.message = this.getTranslation('CONTACTS.PLACEHOLDER3');
   }
 
   @ViewChild('messageInput') messageInput!: ElementRef;
@@ -57,6 +63,21 @@ export class ContactComponent implements OnInit {
     this.isChecked = !this.isChecked;
     if (this.isChecked) {
       this.showCheckboxError = false;
+    }
+  }
+
+  clearEmailError() {
+    if (
+      this.contactData.email.length > 0 &&
+      !this.isEmailValid(this.contactData.email)
+    ) {
+      this.contactData.email = '';
+    }
+  }
+
+  checkEmailValidity() {
+    if (!this.isEmailValid(this.contactData.email)) {
+      this.contactData.email = '';
     }
   }
 
@@ -78,18 +99,22 @@ export class ContactComponent implements OnInit {
 
   onSubmit(ngForm: NgForm) {
     if (!this.isChecked) {
-      this.showCheckboxError = true;
+      this.handleCheckboxError();
       return;
     }
 
     if (!ngForm.valid) {
-      this.showFormErrors(ngForm);
+      this.handleSubmitError(ngForm);
       return;
     }
 
     if (ngForm.submitted && ngForm.form.valid) {
       this.processFormSubmission(ngForm);
     }
+  }
+
+  handleCheckboxError() {
+    this.showCheckboxError = true;
   }
 
   processFormSubmission(ngForm: NgForm) {
@@ -105,7 +130,7 @@ export class ContactComponent implements OnInit {
     this.http
       .post(this.post.endPoint, this.post.body(this.contactData))
       .subscribe({
-        next: () => {
+        next: (response) => {
           this.handleSubmitSuccess(ngForm);
           ngForm.resetForm();
         },
@@ -116,56 +141,77 @@ export class ContactComponent implements OnInit {
       });
   }
 
-  showFormErrors(ngForm: NgForm) {
-    if (ngForm.controls['name']?.invalid) {
-      this.placeholders.name = this.translationData.getTranslation('CONTACTS.ERROR_NAME_REQUIRED');
+  handleSubmitError(ngForm: NgForm) {
+    this.showNameError(ngForm);
+    this.showMailError(ngForm);
+    this.showMessageError(ngForm);
+  }
+
+  showNameError(ngForm: NgForm) {
+    if (ngForm.controls['name'] && ngForm.controls['name'].invalid) {
+      this.placeholders.name = 'Oops! It seems your name is missing';
     }
-    if (ngForm.controls['email']?.invalid) {
-      const hasPatternError = ngForm.controls['email'].errors?.['pattern'];
-      this.placeholders.email = hasPatternError
-        ? this.translationData.getTranslation('CONTACTS.ERROR_INVALID_EMAIL')
-        : this.translationData.getTranslation('CONTACTS.ERROR_EMAIL_REQUIRED');
-      this.contactData.email = '';
+  }
+
+  showMailError(ngForm: NgForm) {
+    if (ngForm.controls['email'] && ngForm.controls['email'].invalid) {
+      if (ngForm.controls['email'].errors?.['pattern']) {
+        this.placeholders.email = 'Please enter a valid email address';
+        this.contactData.email = '';
+      } else {
+        this.placeholders.email = 'Hoppla! Your email is required';
+        this.contactData.email = '';
+      }
     }
-    if (ngForm.controls['message']?.invalid) {
-      this.placeholders.message = this.translationData.getTranslation('CONTACTS.ERROR_MESSAGE_REQUIRED');
+  }
+
+  showMessageError(ngForm: NgForm) {
+    if (ngForm.controls['message'] && ngForm.controls['message'].invalid) {
+      this.placeholders.message = 'What do you need to develop?';
     }
   }
 
   handleSubmitSuccess(ngForm: NgForm) {
-    this.contactData = { name: '', email: '', message: '' };
-    this.resetPlaceholders();
+    this.contactData.name = '';
+    this.contactData.email = '';
+    this.contactData.message = '';
+    this.placeholders.name = this.getTranslation('CONTACTS.PLACEHOLDER1');
+    this.placeholders.email = this.getTranslation('CONTACTS.PLACEHOLDER2');
+    this.placeholders.message = this.getTranslation('CONTACTS.PLACEHOLDER3');
     this.successMail = true;
     this.isChecked = false;
-    ngForm.resetForm();
 
+    ngForm.resetForm();
     setTimeout(() => {
       this.successMail = false;
-    }, 2000);
+    }, 5000);
   }
 
-  private resetPlaceholders() {
-    this.placeholders.name = this.translationData.getTranslation('CONTACTS.PLACEHOLDER1');
-    this.placeholders.email = this.translationData.getTranslation('CONTACTS.PLACEHOLDER2');
-    this.placeholders.message = this.translationData.getTranslation('CONTACTS.PLACEHOLDER3');
+  setActiveLang(lang: 'en' | 'de') {
+    this.activeLang = lang;
+    this.translationData.setLanguage(lang);
   }
 
   getTranslation(key: string): string {
     return this.translationData.getTranslation(key);
   }
 
+
   scrollToInput(inputId: string) {
     const inputElement = document.getElementById(inputId);
-    if (!inputElement) return;
 
-    inputElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (inputElement) {
+      inputElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-    setTimeout(() => {
-      inputElement.focus();
-      inputElement.classList.add('highlight');
       setTimeout(() => {
-        inputElement.classList.remove('highlight');
-      }, 2000);
-    }, 500);
+        inputElement.focus();
+        inputElement.classList.add('highlight');
+
+        setTimeout(() => {
+          inputElement.classList.remove('highlight');
+        }, 2000);
+      }, 500);
+    }
   }
+
 }
