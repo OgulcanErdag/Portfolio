@@ -202,12 +202,67 @@ textarea {
   color: $standard-green !important;
 }
 
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.success-popup {
+  background: #0d1f1c;
+  border: 1px solid $standard-green;
+  border-radius: 12px;
+  padding: 48px 64px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(61, 207, 182, 0.2);
+  animation: popIn 0.3s ease;
+
+  > p {
+    font-family: "Fira Code";
+    font-size: 20px;
+    color: $standard-green;
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .highlight {
   background-color: #0c3e35;
   /* Hintergrundfarbe auf das gesamte Input-Feld */
   color: white;
   /* Optional: Textfarbe anpassen, damit es lesbar bleibt */
-  transition: background-color 0.5s ease-in-out, filter 0.5s ease-in-out;
+  transition:
+    background-color 0.5s ease-in-out,
+    filter 0.5s ease-in-out;
   /* Glatter Übergangseffekt */
   filter: brightness(1.2);
   /* Erhöht die Helligkeit um 20% */
