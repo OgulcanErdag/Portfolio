@@ -139,6 +139,11 @@ export class ProjectsComponent {
       subtitle: 'Configuration Management • Playbooks',
       repos: [
         {
+          title: 'Ansible-Project',
+          tech: 'AWS | Terraform | SQL',
+          url: 'https://github.com/OgulcanErdag/Ansible-Project.git'
+        },
+        {
           title: 'Hands-On',
           tech: 'Playbooks | Roles | Vault',
           url: 'https://github.com/OgulcanErdag/Ansible_Hands_on.git'
